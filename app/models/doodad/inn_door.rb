@@ -7,7 +7,7 @@ class Doodad::InnDoor < Doodad
     @open = false
   end
 
-  def unlock(game)
+  def unlock
     if @open
       'You already unlocked the door'
     elsif self.find 'inn_key'
