@@ -32,7 +32,7 @@ class BaseEntity
     return nil if id.nil?
 
     children.find do |child|
-      return self if child.ids.include? id
+      return child if child.ids.include? id
 
       if recursively
         hit = child.find(id, recursively: recursively)
