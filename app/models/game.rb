@@ -35,7 +35,7 @@ class Game < BaseEntity
 
       # LibraryEntrance
       add_node Location::LibraryEntrance.new {
-        add_node Doodad::Insects
+        add_node Doodad::Insects.new
       }
 
       # Library
