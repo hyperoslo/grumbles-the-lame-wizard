@@ -1,5 +1,9 @@
 class Wizard < BaseEntity
 
+  def ids
+    [ :wizard, :me, :inventory ]
+  end
+
   alias_method :current_location, :parent
 
   def references(game, id)
