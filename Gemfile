@@ -1,4 +1,5 @@
 source 'https://rubygems.org'
+ruby '2.1.2'
 
 # Full-stack web application framework
 gem 'rails', '~> 4.1'
