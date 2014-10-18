@@ -8,9 +8,11 @@ class InteractionFactory
     self.as_hash = args.each_with_object({}) do |obj, hsh|
       hsh[obj.class.name.demodulize.underscore] = obj
     end
-    class_name = self.as_hash.keys.map(&:classify).join("")
+    class_name = self.as_hash.keys.sort.map(&:classify).join("")
     class_name = "Interaction::#{class_name}"
-    self.object = Object.const_get(class_name).new
+#    if class_exists? class_name
+      self.object = Object.const_get(class_name).new
+#    end
   end
 
   def perform(method)
