@@ -1,0 +1,2 @@
+class Game < BaseEntity
+end
