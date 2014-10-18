@@ -1,14 +1,14 @@
 class GameController < ApplicationController
   INTERNAL_METHOD_NAMES = {
-    search: :describe,
-    get:    :pick_up,
-    move:   :move_to,
-    copy:   :duplicate,
-    lock:   :lock,
-    unlock: :unlock,
-    merge:  :merge,
-    report: :talk_to,
-    patch:  :patch,
+    'SEARCH' => :describe,
+    'GET'    => :pick_up,
+    'MOVE'   => :move_to,
+    'COPY'   => :duplicate,
+    'LOCK'   => :lock,
+    'UNLOCK' => :unlock,
+    'MERGE'  => :merge,
+    'REPORT' => :talk_to,
+    'PATCH'  => :patch,
   }
 
   respond_to :html, :json
@@ -17,19 +17,19 @@ class GameController < ApplicationController
   end
 
   def handle
-    method = internal_method params[:verb].underscore.to_sym
+    method = internal_method params[:verb]
 
     if method == :move_to
       target_location = game.find params[:entity]
       text = <<-HTML
         <div class="response">
-          #{game.player.current_location.move_player_to(params[:entity].underscore)}
+          #{game.player.current_location.move_player_to(params[:entity])}
         </div>
       HTML
 
     elsif method.present?
-      entity       = game.player.references game, params[:entity].underscore
-      other_entity = game.player.references game, params[:other_entity].underscore
+      entity       = game.player.references game, params[:entity]
+      other_entity = game.player.references game, params[:other_entity]
 
       if entity.nil?
         text = <<-HTML
