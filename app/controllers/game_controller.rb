@@ -1,14 +1,14 @@
 class GameController < ApplicationController
   INTERNAL_METHOD_NAMES = {
-    'SEARCH' => :describe,
-    'GET'    => :pick_up,
-    'MOVE'   => :move_to,
-    'COPY'   => :duplicate,
-    'LOCK'   => :lock,
-    'UNLOCK' => :unlock,
-    'MERGE'  => :merge,
-    'REPORT' => :talk_to,
-    'PATCH'  => :patch,
+    search: :describe,
+    get:    :pick_up,
+    move:   :move_to,
+    copy:   :duplicate,
+    lock:   :lock,
+    unlock: :unlock,
+    merge:  :merge,
+    report: :talk_to,
+    patch:  :patch,
   }
 
   respond_to :html, :json
@@ -17,7 +17,7 @@ class GameController < ApplicationController
   end
 
   def handle
-    method = internal_method params[:verb]
+    method = internal_method params[:verb].downcase.to_sym
 
     if method == :move_to
       target_location = game.find params[:entity]
