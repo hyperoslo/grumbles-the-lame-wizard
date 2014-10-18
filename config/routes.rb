@@ -1,3 +1,5 @@
 Rails.application.routes.draw do
-  match ':verb/:entity(/:other_entity)', to: 'game#handle', via: [ :get, :post ]
+  root to: 'game#index'
+
+  match ':verb/:entity(/:other_entity)', to: 'game#handle', via: :post
 end

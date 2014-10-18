@@ -11,6 +11,11 @@ class GameController < ApplicationController
     'PATCH'  => :patch,
   }
 
+  respond_to :html, :json
+
+  def index
+  end
+
   def handle
     method = internal_method params[:verb]
 
@@ -22,11 +27,13 @@ class GameController < ApplicationController
       entity       = game.find_in_tree params[:entity]
       other_entity = game.find_in_tree params[:other_entity]
 
-      render text: if other_entity
-                    entity.send method, game: game, other: other_entity
-                  else
-                    entity.send method, game: game
-                  end
+      text = if other_entity
+               entity.send method, game: game, other: other_entity
+             else
+               entity.send method, game: game
+             end
+
+      render text: text
     end
   end
 
