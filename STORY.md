@@ -3,14 +3,15 @@
 ## Setup
 
 - Unnamed starting room
-  - Bucket
-  - Door (locked, but with a key in the slot)
+  - Desk Drawer
+    - Key
+  - Door (locked)
   - Player
     - 'Holey' shoes
     - 'Magic' stick (not really, it sucks)
 
 - Courtyard
-  - Fountain (turned on, with water)
+  - Holy Fountain (with water)
   - Hedge
   - Sign
 
@@ -30,8 +31,7 @@
   - Bartender
 
 - Unnamed room
-  - Bookcase
-    - Insects
+  - Insects
 
 - Library
   - Bookcase
@@ -52,7 +52,7 @@
   - Moat (filled to the brim with water)
 
 - Castle Courtyard
-  - Guard (a bit further up ahead, down a hill)
+  - Guard
   - Door
 
 - Castle Treasury
