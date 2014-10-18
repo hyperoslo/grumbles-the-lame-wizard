@@ -34,7 +34,7 @@ class GameController < ApplicationController
       if entity.nil?
         text = <<-HTML
           <div class="response error">
-            #{params[:entity].capitalize} does not really exist, it’s all in your mind.
+            #{params[:entity]} does not really exist, it’s all in your mind.
           </div>
         HTML
 
