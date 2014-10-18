@@ -1,9 +1,10 @@
-<form-output></form-output>
-
 <form ng-controller="FormCtrl as formCtrl"
   ng-submit="formCtrl.submit()" name="formCtrl.form">
 
-  <input type="text" name="command" ng-model="formCtrl.command" 
-    required /><button type="submit">Submit</button>
+  <label class="prompt">$</label><input
+    type="text" name="command" id="command"
+    ng-model="formCtrl.command" required autofocus />
 
 </form>
+
+<form-output></form-output>

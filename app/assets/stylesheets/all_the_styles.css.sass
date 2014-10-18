@@ -1,15 +1,21 @@
 *
   box-sizing: border-box
   font-size: 50px
+  font-family: monospace
 
-$button-width: 250px
+$prompt-width: 50px
 
-input[type=text], button
-  height: 100px
-  padding: 10px
+.prompt
+  width: $prompt-width
+  color: gray
 
 input[type=text]
-  width: calc(100% - #{$button-width})
+  width: calc(100%  - #{$prompt-width})
+  border: none
 
-button
-  width: $button-width
+  &:focus
+    outline: none
+
+.prompt, input[type=text]
+  height: 100px
+  padding: 10px
