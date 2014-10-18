@@ -1,9 +1,44 @@
 class BaseEntity
-  def find(what)
-    return nil if what.nil?
 
-    # TODO :: Actually find a child of this entity
-    Wizard.new
+  attr_accessor :parent
+  attr_accessor :children
+
+  def initialize(&block)
+    @parent = nil
+    @children = []
+
+    instance_eval(&block) if block_given?
+  end
+
+  def ids
+    [ self.class.name.demodulize.downcase ]
+  end
+
+  def add_node(target)
+    target.move_node_to self
+  end
+
+  def move_node_to(target)
+    @parent.children.remove(self) if @parent
+    @parent = target
+    @parent.children << self
+  end
+
+  def find_in_tree(id)
+    find(id, recursively: true)
+  end
+
+  def find(id, recursively: false)
+    return nil if id.nil?
+
+    children.find do |child|
+      return self if child.ids.include? id
+
+      if recursively
+        hit = child.find(id, recursively: recursively)
+        return hit if hit
+      end
+    end
   end
 
   def describe(game:)
