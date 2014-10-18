@@ -23,7 +23,7 @@ class Location < BaseEntity
 
   def list_connections
     connections.map do |connection|
-      " - #{connection}"
+      " - <strong>#{connection}</strong>"
     end.join '<br>'
   end
 

@@ -8,7 +8,7 @@ class Wizard < BaseEntity
 
   def describe
     <<-DESC
-    This is you in the #{current_location}. You are currently carrying:<br />
+    This is you in the <strong>#{current_location.id}</strong>. You are currently carrying:<br />
     <br />
     #{list_entities}
     DESC

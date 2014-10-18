@@ -59,7 +59,7 @@ class BaseEntity
 
   def list_entities
     children.map do |child|
-      " - #{child.id}"
+      " - <strong>#{child.id}</strong>"
     end.join '<br>'
   end
 

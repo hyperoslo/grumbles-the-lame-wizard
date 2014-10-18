@@ -34,7 +34,7 @@ class GameController < ApplicationController
       if entity.nil?
         text = <<-HTML
           <div class="response error">
-            #{params[:entity]} does not really exist, it’s all in your mind.
+            <strong>#{params[:entity]}</strong> does not really exist, it’s all in your mind.
           </div>
         HTML
 
@@ -54,7 +54,7 @@ class GameController < ApplicationController
     else
       text = <<-HTML
         <div class="response error">
-          You try to #{params[:verb]}, but realize you have no idea how to do that.
+          You try to <strong>#{params[:verb]}</strong>, but realize you have no idea how to do that.
         </div>
       HTML
     end
