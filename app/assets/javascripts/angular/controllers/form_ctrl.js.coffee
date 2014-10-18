@@ -13,8 +13,9 @@ angular.module("grumbles")
       path += "/#{other_entity}" if other_entity?
 
       $http.post(path)
-        .success (data, status, headers, config) ->
+        .success (data, status, headers, config) =>
           Output.add data
+          @command = ""
 
         .error (data, status, headers, config) ->
           console.error "Everything sucks ...", data
