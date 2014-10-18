@@ -24,7 +24,7 @@ class Location::Inn < Location
 
 
 
-  def description(game)
+  def description
     'Beautiful inn, such precious furniture'
   end
 
