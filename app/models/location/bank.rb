@@ -3,7 +3,7 @@ class Location::Bank < Location
     [:courtyard]
   end
 
-  def describe
+  def description
     'That goblins probably drive Bentley'
   end
 end
