@@ -8,14 +8,23 @@ $prompt-width: 50px
 .prompt
   width: $prompt-width
   color: gray
+  padding-right: 0
+
+.response
+  margin-left: $prompt-width
+
+.prompt, input[type=text]
+  height: 100px
+  padding: 10px
 
 input[type=text]
   width: calc(100%  - #{$prompt-width})
+  padding-left: 0
+  margin-left: 0
   border: none
 
   &:focus
     outline: none
 
-.prompt, input[type=text]
-  height: 100px
-  padding: 10px
+.error
+  color: red
