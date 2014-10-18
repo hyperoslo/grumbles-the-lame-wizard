@@ -3,7 +3,7 @@ class Location::Courtyard < Location
     [ :inn, :bank, :forgery, :bar, :library_entrance, :road_to_castle ]
   end
 
-  def describe(game)
+  def description
     'Beautiful inn, such precious furniture'
   end
 end

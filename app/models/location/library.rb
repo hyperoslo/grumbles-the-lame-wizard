@@ -3,7 +3,7 @@ class Location::Library < Location
     [:library_entrance]
   end
 
-  def describe(game)
+  def describe
     'Books books'
   end
 end

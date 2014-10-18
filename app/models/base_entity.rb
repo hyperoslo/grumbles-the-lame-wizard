@@ -45,8 +45,16 @@ class BaseEntity
     end
   end
 
+  def game
+    @game ||= begin
+      entity = self
+      entity = entity.parent while entity.parent
+      entity
+    end
+  end
+
   def player
-    find_in_tree :me
+    game.find_in_tree :me
   end
 
   def list_entities
@@ -55,39 +63,39 @@ class BaseEntity
     end.join '<br>'
   end
 
-  def describe(game:)
+  def describe
     'Nothing to see here. Move along.'
   end
 
-  def pick_up(game:)
+  def pick_up
     'I wouldn’t pick that up if I were you.'
   end
 
-  def move_to(game:)
+  def move_to
     'You try to move, but you can’t.'
   end
 
-  def copy(game:)
+  def copy
     'Last I checked, pirating was illegal.'
   end
 
-  def lock(game:)
+  def lock
     'Are you being paranoid?'
   end
 
-  def unlock(game:)
+  def unlock
     'You’re a wizard, not a lockpicker!'
   end
 
-  def merge(game:, other:)
+  def merge(other:)
     'Merging that doesn’t even make any sense.'
   end
 
-  def report(game:)
+  def report
     'You report it, but nobody cares.'
   end
 
-  def patch(game:)
+  def patch
     'You feel like you don’t need to patch this.'
   end
 end

@@ -28,8 +28,8 @@ class GameController < ApplicationController
       HTML
 
     elsif method.present?
-      entity       = game.player.references game, params[:entity]
-      other_entity = game.player.references game, params[:other_entity]
+      entity       = game.player.references params[:entity]
+      other_entity = game.player.references params[:other_entity]
 
       if entity.nil?
         text = <<-HTML
@@ -40,9 +40,9 @@ class GameController < ApplicationController
 
       else
         text = if other_entity
-                 entity.send method, game: game, other: other_entity
+                 entity.send method, other: other_entity
                else
-                 entity.send method, game: game
+                 entity.send method
                end
 
         text = <<-HTML

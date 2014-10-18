@@ -31,9 +31,9 @@ class Location < BaseEntity
     true
   end
 
-  def describe(game)
+  def describe
     <<-DESC
-    #{description(game)}.<br />
+    #{description}.<br />
     <br />
     This location contains:<br />
     <br />

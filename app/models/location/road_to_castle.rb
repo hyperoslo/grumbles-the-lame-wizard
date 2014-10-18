@@ -3,7 +3,7 @@ class Location::RoadToCastle < Location
     [:courtyard, :castle_moat]
   end
 
-  def describe(game)
+  def describe
     'Castle is far, road is hard'
   end
 end

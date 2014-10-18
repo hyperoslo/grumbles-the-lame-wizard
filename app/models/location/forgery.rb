@@ -3,7 +3,7 @@ class Location::Forgery < Location
     [:courtyard]
   end
 
-  def describe(game)
+  def describe
     'It\' hot and magical here'
   end
 end

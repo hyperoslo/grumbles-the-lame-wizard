@@ -3,7 +3,7 @@ class Location::Bar < Location
     [:courtyard]
   end
 
-  def describe(game)
+  def describe
     'Usuall bar, nothing specific.'
   end
 end

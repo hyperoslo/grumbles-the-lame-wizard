@@ -6,15 +6,15 @@ class Wizard < BaseEntity
 
   alias_method :current_location, :parent
 
-  def describe(game)
+  def describe
     <<-DESC
-    This is you. You are currently carrying:<br />
+    This is you in the #{current_location}. You are currently carrying:<br />
     <br />
     #{list_entities}
     DESC
   end
 
-  def references(game, id)
+  def references(id)
     return if id.nil?
 
     id = id.to_sym

@@ -3,7 +3,7 @@ class Location::LibraryEntrance < Location
     [:courtyard, :library]
   end
 
-  def describe(game)
+  def describe
     'Spider webs bar my way! It seems libraries aren\'t that popular nowadays'
   end
 end

@@ -3,7 +3,7 @@ class Location::CastleMoat < Location
     [:road_to_castle, :castle_treasury]
   end
 
-  def describe(game)
+  def describe
     'moat description and shit'
   end
 end
