@@ -1,15 +1,17 @@
 class Wizard < BaseEntity
 
+  alias_method :current_location, :parent
+
   def references(game, id)
     return if id.nil?
 
     id = id.to_sym
 
     # Current location
-    return parent if parent.is? id
+    return current_location if current_location.is? id
 
     # Entities in the current location
-    entity = parent.find id
+    entity = current_location.find id
     return entity if entity
 
     # Inventory items
@@ -17,7 +19,7 @@ class Wizard < BaseEntity
     return item if item
 
     # Location connections
-    if parent.connections.include? id
+    if current_location.connects_to? id
       game.find id
     end
   end

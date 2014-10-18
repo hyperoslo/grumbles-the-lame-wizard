@@ -4,6 +4,10 @@ class Location < BaseEntity
     []
   end
 
+  def connects_to?(id)
+    connections.include? id
+  end
+
   def move_allowed?(target)
     true
   end
