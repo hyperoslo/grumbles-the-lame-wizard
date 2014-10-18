@@ -74,7 +74,7 @@ class Game < BaseEntity
       }
 
       # Castle Treasury
-      add_node Location::CastleTreasury {
+      add_node Location::CastleTreasury.new {
         add_node Doodad::CastleGateFromInside.new
         add_node Item::Chest.new
         add_node Item::Princes.new
