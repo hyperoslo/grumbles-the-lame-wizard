@@ -34,3 +34,10 @@ group :development do
   gem 'spring', '~> 1.1'
 
 end
+
+group :production do
+
+  # Following best practices to run a maintainable and scalable app on Rails
+  gem 'rails_12factor', '~> 0.0.3'
+
+end
