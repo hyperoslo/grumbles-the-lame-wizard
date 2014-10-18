@@ -47,11 +47,11 @@ class BaseEntity
     'Nothing to see here. Move along.'
   end
 
-  def pickup(game:)
+  def pick_up(game:)
     'I wouldn’t pick that up if I were you.'
   end
 
-  def move(game:)
+  def move_to(game:)
     'You try to move, but you can’t.'
   end
 

@@ -1,7 +1,7 @@
 class GameController < ApplicationController
   INTERNAL_METHOD_NAMES = {
     'SEARCH' => :describe,
-    'GET'    => :pickup,
+    'GET'    => :pick_up,
     'MOVE'   => :move_to,
     'COPY'   => :duplicate,
     'LOCK'   => :lock,
