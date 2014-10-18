@@ -23,7 +23,7 @@ class GameController < ApplicationController
       target_location = game.find params[:entity]
       text = <<HTML
 <div class="response">
-  #{game.player.send(method, game: game, target: target_location)}
+  #{game.player.current_location.move_player_to(params[:entity])}
 </div>
 HTML
 

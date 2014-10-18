@@ -28,4 +28,7 @@ class Wizard < BaseEntity
     end
   end
 
+  def move_to(next_location)
+    current_location = player.parent
+  end
 end

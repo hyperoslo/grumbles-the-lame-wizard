@@ -23,7 +23,7 @@ class BaseEntity
   end
 
   def move_node_to(target)
-    @parent.children.remove(self) if @parent
+    @parent.children.delete(self) if @parent
     @parent = target
     @parent.children << self
   end
@@ -43,6 +43,10 @@ class BaseEntity
         return hit if hit
       end
     end
+  end
+
+  def player
+    find_in_tree :wizard
   end
 
   def describe(game:)
