@@ -10,12 +10,12 @@ class BaseEntity
     instance_eval(&block) if block_given?
   end
 
-  def ids
-    [ self.class.name.demodulize.downcase.to_sym ]
+  def id
+    self.class.name.demodulize.underscore.to_sym
   end
 
   def is?(id)
-    ids.include? id.to_sym
+    self.id == id.to_sym
   end
 
   def add_node(target)
@@ -46,7 +46,13 @@ class BaseEntity
   end
 
   def player
-    find_in_tree :wizard
+    find_in_tree :me
+  end
+
+  def list_entities
+    children.map do |child|
+      " - #{child.id}"
+    end.join '<br>'
   end
 
   def describe(game:)
