@@ -35,15 +35,31 @@ class GameController < ApplicationController
 
       render text: text
     end
+
+    save!
   end
 
   protected
 
   def game
-    @game ||= Game.template
+    @game ||= load! || Game.template
   end
 
   private
+
+  def load!
+    data = REDIS.get(session_id)
+    Marshal.load(data) if data
+  end
+
+  def save!
+    data = Marshal.dump(game)
+    REDIS.set(session_id, data)
+  end
+
+  def session_id
+    session[:session_id]
+  end
 
   def internal_method(funny)
     INTERNAL_METHOD_NAMES.fetch funny
