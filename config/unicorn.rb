@@ -13,8 +13,4 @@ after_fork do |server, worker|
   Signal.trap "TERM" do
     puts "Unicorn worker intercepting TERM and doing nothing. Wait for master to send QUIT"
   end
-
-  config = ::Rails.application.config.database_configuration[::Rails.env]
-  config['reaping_frequency'] = ENV['DB_REAP_FREQ'] || 10
-  config['pool']              = ENV['DB_POOL'] || 5
 end
