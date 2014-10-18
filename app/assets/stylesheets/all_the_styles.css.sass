@@ -3,6 +3,10 @@
   font-size: 50px
   font-family: monospace
 
+html, body
+  height: 100%
+  overflow: hidden
+
 $prompt-width: 50px
 
 .prompt
@@ -16,6 +20,18 @@ $prompt-width: 50px
 .prompt, input[type=text]
   height: 100px
   padding: 10px
+
+output
+  position: absolute
+  top: $prompt-width
+  left: 0
+  bottom: 100px
+  overflow: auto
+
+form
+  position: absolute
+  bottom: 0
+  left: 0
 
 input[type=text]
   width: calc(100%  - #{$prompt-width})
