@@ -43,4 +43,7 @@ group :production do
   # Use ng-annotate in the Rails asset pipeline
   gem 'ngannotate-rails', '~> 0.10'
 
+  # The official appsignal
+  gem 'appsignal', '~> 0.10'
+
 end
