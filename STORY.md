@@ -2,13 +2,13 @@
 
 ## Setup
 
-- Unnamed starting room
-  - Desk Drawer
-    - Key
+- Inn
+  - Key
   - Door (locked)
   - Player
     - 'Holey' shoes
     - 'Magic' stick (not really, it sucks)
+    - Hearthstone
 
 - Courtyard
   - Holy Fountain (with water)
