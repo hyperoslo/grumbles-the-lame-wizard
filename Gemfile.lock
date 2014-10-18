@@ -59,6 +59,9 @@ GEM
     mime-types (2.4.2)
     minitest (5.4.2)
     multi_json (1.10.1)
+    ngannotate-rails (0.10.1)
+      execjs
+      rails (>= 3.1)
     rack (1.5.2)
     rack-test (0.6.2)
       rack (>= 1.0)
@@ -119,6 +122,7 @@ DEPENDENCIES
   coffee-rails (~> 4.1)
   jbuilder (~> 2.2)
   jquery-rails (~> 3.1)
+  ngannotate-rails (~> 0.10)
   rails (~> 4.1)
   rails_12factor (~> 0.0.3)
   redis (~> 3.1.0)

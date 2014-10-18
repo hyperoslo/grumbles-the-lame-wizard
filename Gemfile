@@ -40,4 +40,7 @@ group :production do
   # Following best practices to run a maintainable and scalable app on Rails
   gem 'rails_12factor', '~> 0.0.3'
 
+  # Use ng-annotate in the Rails asset pipeline
+  gem 'ngannotate-rails', '~> 0.10'
+
 end
