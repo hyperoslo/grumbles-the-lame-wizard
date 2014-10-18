@@ -20,7 +20,6 @@ class GameController < ApplicationController
     method = internal_method params[:verb]
 
     if method == :move_to
-      target_location = game.find params[:entity]
       text = <<-HTML
         <div class="response">
           #{game.player.current_location.move_player_to(params[:entity])}
