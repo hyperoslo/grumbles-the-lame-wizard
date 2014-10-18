@@ -39,7 +39,7 @@ class GameController < ApplicationController
 
       else
         text = if other_entity
-                 entity.send method, other: other_entity
+                 InteractionFactory.new(entity, other_entity).perform(method)
                else
                  entity.send method
                end
