@@ -23,13 +23,13 @@ class GameController < ApplicationController
       target_location = game.find params[:entity]
       text = <<-HTML
         <div class="response">
-          #{game.player.current_location.move_player_to(params[:entity].downcase)}
+          #{game.player.current_location.move_player_to(params[:entity])}
         </div>
       HTML
 
     elsif method.present?
-      entity       = game.player.references game, params[:entity].downcase
-      other_entity = game.player.references game, params[:other_entity].downcase
+      entity       = game.player.references game, params[:entity]
+      other_entity = game.player.references game, params[:other_entity]
 
       if entity.nil?
         text = <<-HTML
