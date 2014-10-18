@@ -1,0 +1,15 @@
+*
+  box-sizing: border-box
+  font-size: 50px
+
+$button-width: 250px
+
+input[type=text], button
+  height: 100px
+  padding: 10px
+
+input[type=text]
+  width: calc(100% - #{$button-width})
+
+button
+  width: $button-width
