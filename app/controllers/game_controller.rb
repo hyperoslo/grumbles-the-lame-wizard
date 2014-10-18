@@ -17,19 +17,19 @@ class GameController < ApplicationController
   end
 
   def handle
-    method = internal_method params[:verb].underscore.to_sym
+    method = internal_method params[:verb].downcase.to_sym
 
     if method == :move_to
       target_location = game.find params[:entity]
       text = <<-HTML
         <div class="response">
-          #{game.player.current_location.move_player_to(params[:entity].underscore)}
+          #{game.player.current_location.move_player_to(params[:entity].downcase)}
         </div>
       HTML
 
     elsif method.present?
-      entity       = game.player.references game, params[:entity].underscore
-      other_entity = game.player.references game, params[:other_entity].underscore
+      entity       = game.player.references game, params[:entity].downcase
+      other_entity = game.player.references game, params[:other_entity].downcase
 
       if entity.nil?
         text = <<-HTML
