@@ -25,6 +25,9 @@ gem 'sass-rails', '~> 4.0'
 # Ruby wrapper for UglifyJS JavaScript compressor
 gem 'uglifier', '~> 2.5'
 
+# Unicorn as the default Rails server
+gem 'unicorn-rails', '~> 2.2'
+
 group :development do
 
   # Byebug is a Ruby 2 debugger
