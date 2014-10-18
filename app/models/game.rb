@@ -1,5 +1,9 @@
 class Game < BaseEntity
 
+  def player
+    find_in_tree :wizard
+  end
+
   def self.template
     Game.new do
 
