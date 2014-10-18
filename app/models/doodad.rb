@@ -1,0 +1,2 @@
+class Doodad < BaseEntity
+end

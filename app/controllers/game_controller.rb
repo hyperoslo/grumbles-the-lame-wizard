@@ -26,7 +26,7 @@ class GameController < ApplicationController
   protected
 
   def game
-    @game ||= Game.new
+    @game ||= Game.template
   end
 
   private
