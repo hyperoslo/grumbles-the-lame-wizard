@@ -4,7 +4,7 @@ class GameController < ApplicationController
     'GET'    => :pickup,
     'MOVE'   => :move_to,
     'COPY'   => :duplicate,
-    "LOCK"   => :lock,
+    'LOCK'   => :lock,
     'UNLOCK' => :unlock,
     'MERGE'  => :merge,
     'REPORT' => :talk_to,
