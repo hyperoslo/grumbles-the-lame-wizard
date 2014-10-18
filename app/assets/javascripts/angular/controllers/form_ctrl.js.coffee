@@ -1,5 +1,5 @@
 angular.module("grumbles")
-  .controller "FormCtrl", ($http) ->
+  .controller "FormCtrl", ($http, Output) ->
     @submit = ->
       return unless @command
 
@@ -14,7 +14,7 @@ angular.module("grumbles")
 
       $http.post(path)
         .success (data, status, headers, config) ->
-          console.log "Everything is awesome!", data
+          Output.add data
 
         .error (data, status, headers, config) ->
           console.error "Everything sucks ...", data
