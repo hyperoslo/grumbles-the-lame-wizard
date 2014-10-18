@@ -9,6 +9,7 @@ class GameController < ApplicationController
     'MERGE'  => :merge,
     'REPORT' => :talk_to,
     'PATCH'  => :patch,
+    'DELETE' => :drop,
   }
 
   respond_to :html, :json

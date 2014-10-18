@@ -7,6 +7,7 @@ class Game < BaseEntity
         add_node Item::InnKey.new
         add_node Doodad::InnDoor.new
         add_node Wizard.new {
+          add_node Item::Floppy.new
           add_node Item::Shoes.new
           add_node Item::Stick.new
           add_node Item::Hearthstone.new
@@ -78,4 +79,7 @@ class Game < BaseEntity
     end
   end
 
+  def reset
+    self.children = self.class.template.children
+  end
 end
