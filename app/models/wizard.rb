@@ -1,7 +1,7 @@
 class Wizard < BaseEntity
 
-  def ids
-    [ :wizard, :me, :inventory ]
+  def id
+    :me
   end
 
   alias_method :current_location, :parent
