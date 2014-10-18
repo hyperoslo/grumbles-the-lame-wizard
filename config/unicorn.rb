@@ -7,8 +7,6 @@ before_fork do |server, worker|
     puts "Unicorn master intercepting TERM and sending myself QUIT instead"
     Process.kill "QUIT", Process.pid
   end
-
-  ActiveRecord::Base.connection.disconnect!
 end
 
 after_fork do |server, worker|
@@ -19,5 +17,4 @@ after_fork do |server, worker|
   config = ::Rails.application.config.database_configuration[::Rails.env]
   config['reaping_frequency'] = ENV['DB_REAP_FREQ'] || 10
   config['pool']              = ENV['DB_POOL'] || 5
-  ActiveRecord::Base.establish_connection
 end
