@@ -3,7 +3,7 @@ source 'https://rubygems.org'
 # Full-stack web application framework
 gem 'rails', '~> 4.1'
 
-# Angular
+# AngularJS bridge for Rails
 gem 'angularjs-rails', '~> 1.3'
 
 # CoffeeScript adapter for the Rails asset pipeline
