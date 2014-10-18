@@ -24,8 +24,8 @@ class GameController < ApplicationController
       target_location = game.find params[:entity]
       render text: game.player.send(method, game: game, target: target_location)
     else
-      entity       = game.find_in_tree params[:entity]
-      other_entity = game.find_in_tree params[:other_entity]
+      entity       = game.player.references game, params[:entity]
+      other_entity = game.player.references game, params[:other_entity]
 
       text = if other_entity
                entity.send method, game: game, other: other_entity
