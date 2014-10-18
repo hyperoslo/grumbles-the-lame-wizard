@@ -21,22 +21,22 @@ class GameController < ApplicationController
 
     if method == :move_to
       target_location = game.find params[:entity]
-      text = <<HTML
-<div class="response">
-  #{game.player.current_location.move_player_to(params[:entity])}
-</div>
-HTML
+      text = <<-HTML
+        <div class="response">
+          #{game.player.current_location.move_player_to(params[:entity])}
+        </div>
+      HTML
 
     elsif method.present?
       entity       = game.player.references game, params[:entity]
       other_entity = game.player.references game, params[:other_entity]
 
       if entity.nil?
-        text = <<HTML
-<div class="response error">
-  #{params[:entity].capitalize} does not really exist, it’s all in your mind.
-</div>
-HTML
+        text = <<-HTML
+          <div class="response error">
+            #{params[:entity].capitalize} does not really exist, it’s all in your mind.
+          </div>
+        HTML
 
       else
         text = if other_entity
@@ -45,18 +45,18 @@ HTML
                  entity.send method, game: game
                end
 
-        text = <<HTML
-<div class="response">
-  #{text}
-</div>
-HTML
+        text = <<-HTML
+          <div class="response">
+            #{text}
+          </div>
+        HTML
       end
     else
-      text = <<HTML
-<div class="response error">
-  You try to #{params[:verb]}, but realize you have no idea how to do that.
-</div>
-HTML
+      text = <<-HTML
+        <div class="response error">
+          You try to #{params[:verb]}, but realize you have no idea how to do that.
+        </div>
+      HTML
     end
 
     render text: text
