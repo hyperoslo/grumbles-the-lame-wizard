@@ -14,6 +14,10 @@ class BaseEntity
     [ self.class.name.demodulize.downcase.to_sym ]
   end
 
+  def is?(id)
+    ids.include? id.to_sym
+  end
+
   def add_node(target)
     target.move_node_to self
   end
@@ -29,12 +33,10 @@ class BaseEntity
   end
 
   def find(id, recursively: false)
-    return nil if id.nil?
-
-    id = id.to_sym
+    return if id.nil?
 
     children.find do |child|
-      return child if child.ids.include? id
+      return child if child.is? id
 
       if recursively
         hit = child.find(id, recursively: recursively)
