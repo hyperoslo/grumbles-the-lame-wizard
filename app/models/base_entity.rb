@@ -49,6 +49,12 @@ class BaseEntity
     find_in_tree :me
   end
 
+  def list_entities
+    children.map do |child|
+      " - #{child.id}"
+    end.join '<br>'
+  end
+
   def describe(game:)
     'Nothing to see here. Move along.'
   end

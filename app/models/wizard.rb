@@ -6,6 +6,14 @@ class Wizard < BaseEntity
 
   alias_method :current_location, :parent
 
+  def describe(game)
+    <<-DESC
+    This is you. You are currently carrying:<br />
+    <br />
+    #{list_entities}
+    DESC
+  end
+
   def references(game, id)
     return if id.nil?
 

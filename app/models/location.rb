@@ -19,11 +19,29 @@ class Location < BaseEntity
     else
       "That location is way too far"
     end
+  end
 
+  def list_connections
+    connections.map do |connection|
+      " - #{connection}"
+    end.join '<br>'
   end
 
   def move_allowed?(target)
     true
+  end
+
+  def describe(game)
+    <<-DESC
+    #{description(game)}.<br />
+    <br />
+    This location contains:<br />
+    <br />
+    #{list_entities}<br /><br />
+    This location connects to:<br />
+    <br />
+    #{list_connections}
+    DESC
   end
 
 end
