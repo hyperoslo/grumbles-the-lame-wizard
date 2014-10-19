@@ -24,4 +24,8 @@ class Doodad::Vault < Doodad
     end
   end
 
+  def describe
+    'It’s a Franz Jäger 1400k vault, supposedly impenetrable and holding the princess.'
+  end
+
 end
