@@ -78,7 +78,7 @@ class BaseEntity
   end
 
   def unlock
-    'I’re a wizard, not a lockpicker!'
+    'I’m a wizard, not a lockpicker!'
   end
 
   def merge
