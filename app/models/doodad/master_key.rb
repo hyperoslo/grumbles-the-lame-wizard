@@ -7,6 +7,7 @@ class Doodad::MasterKey < Doodad
   end
 
   def pick_up
-    '<strong>master_key</strong> is behind <strong>glass_pane</strong>. Now way I can original one, goblin will catch me'
+    @tried = true
+    '<strong>master_key</strong> is behind <strong>glass_pane</strong>. No way I can original one, goblin will catch me'
   end
 end
