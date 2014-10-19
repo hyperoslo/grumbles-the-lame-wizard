@@ -32,4 +32,18 @@ class Location < BaseEntity
     end.join '<br>'
   end
 
+  def search
+    <<-HTML
+      You look around the <strong>#{id}</strong>, seeing:<br>
+      <br>
+      #{list_entities}
+
+      <br><br>
+
+      The <strong>#{id}</strong> connects to:<br>
+      <br>
+      #{list_connections}
+    HTML
+  end
+
 end
