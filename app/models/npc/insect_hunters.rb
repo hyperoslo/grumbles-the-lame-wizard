@@ -1,7 +1,9 @@
 class NPC::InsectHunters < NPC
+  attr_reader :active
 
-  def talkto
-    self.move_node_to 'unnamedroom'
+  def initialize
+    super
+    @active false
   end
 
 end
