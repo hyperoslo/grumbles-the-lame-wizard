@@ -8,7 +8,7 @@ class Item::Letter < Item
     sane person dares venture there. It might be worth the risk. To get started,
     try the following commands:
 
-    $ TRACE map
+    $ TRACE game_manual
     $ SEARCH room
 
     KTHX
