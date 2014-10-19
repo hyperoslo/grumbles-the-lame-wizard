@@ -15,8 +15,8 @@ class Location < BaseEntity
 
   def list_connections
     connections.map do |connection|
-      " - <strong>#{connection}</strong>"
-    end.join "\n"
+      "<li><strong>#{connection}</strong></li>"
+    end.join.prepend("<ul>").concat("</ul>")
   end
 
   def search
