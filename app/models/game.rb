@@ -12,7 +12,6 @@ class Game < BaseEntity
           add_node Item::Shoes.new
           add_node Item::Stick.new
           add_node Item::Hearthstone.new
-          add_node Item::Map.new
         }
       }
 
@@ -20,6 +19,7 @@ class Game < BaseEntity
       add_node Location::Courtyard.new {
         add_node Doodad::Hedge.new
         add_node Doodad::Sign.new
+        add_node Item::Map.new
       }
 
       # Bar
