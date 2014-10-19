@@ -1,4 +1,4 @@
-class Item::Vault < Item
+class Doodad::Vault < Doodad
   attr_reader :open
 
   def initialize
