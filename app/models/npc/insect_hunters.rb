@@ -1,4 +1,4 @@
-class Doodad::InsectHunters < Doodad
+class NPC::InsectHunters < NPC
   attr_reader :active
 
   def initialize

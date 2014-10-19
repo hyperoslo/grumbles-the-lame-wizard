@@ -75,7 +75,7 @@ class BaseEntity
     'You try to move, but you can’t.'
   end
 
-  def copy
+  def duplicate
     'Last I checked, pirating was illegal.'
   end
 
@@ -91,7 +91,7 @@ class BaseEntity
     'Merging that doesn’t even make any sense.'
   end
 
-  def report
+  def talk_to
     'You report it, but nobody cares.'
   end
 
