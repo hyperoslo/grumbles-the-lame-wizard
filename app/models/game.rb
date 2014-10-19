@@ -63,7 +63,7 @@ class Game < BaseEntity
       }
 
       # Castle Moat
-      add_node Location::CastleMoat.new {
+      add_node Location::CastleEntrance.new {
         add_node NPC::Guard.new
       }
 

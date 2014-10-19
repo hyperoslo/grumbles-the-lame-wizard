@@ -4,7 +4,8 @@
 
     <label class="prompt">$</label><input
       type="text" name="command" id="command"
-      ng-model="formCtrl.command" required autofocus />
+      ng-model="formCtrl.command" required autofocus
+      ng-pattern="/([A-Z]+\s[a-z_]+(\s[a-z_]+)?)+(&&)?/" />
 
   </form>
 

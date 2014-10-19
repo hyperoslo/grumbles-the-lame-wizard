@@ -1,41 +1,45 @@
 GET inn_key
+GET lame_stic
+GET holey_shoe
 MERGE inn_key inn_door
 UNLOCK inn_door
 MOVE courtyard
 MOVE church
 PATCH holey_shoes
 MOVE church_library
-MOVE chouryard
+MOVE courtyard
 MOVE bar
 GET crystal
 GET insect_hunters
 GET wine
 MOVE courtyard
 MOVE church
-MERGE insecrts insecr_hunters
-MOVE library
+MERGE insects insect_hunters
+MOVE church_library
 GET blacksmithing_book
 GET wizardy_book
 MERGE lame_stick crystal
 MERGE crystal_stick wizardy_book
 MOVE church
 MOVE courtyard
-MOVE forgery
-GET blueprint
+MERGE hedge epic_wand
+MOVE bank
+GET master_key
 MOVE courtyard
-MERGE herge epic_wand
+MOVE forgery
+MERGE forged_dwarf blacksmithing_book
+GET key_blueprint
+MOVE courtyard
 MOVE bank
 COPY master_key
 MOVE courtyard
 MOVE road_to_castle
-MERGE holy_shoes river
-MOVE castle_moat
+MOVE castle_entrance
 MERGE guard wine
-MOVE castle_treasury
+MOVE castle
 LOCK castle_gate
-MERGE epic_wand sloth
-GET princes
-MERGE chest_key chest
-UNLOCK chest
-GET gold
-MOVE hearthsone
+MERGE vault master_key
+UNLOCK vault
+MERGE sloth epic_wand
+GET princess
+GET hearthstone

@@ -1,10 +1,6 @@
 class Location::Castle < Location
   def connections
-    [:castle_moat]
-  end
-
-  def describe
-    'Beautiful princess and chest full of gold, what could be better?'
+    [:castle_entrance]
   end
 
   def reset

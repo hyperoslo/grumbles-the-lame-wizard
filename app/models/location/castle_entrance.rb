@@ -1,6 +1,6 @@
-class Location::CastleMoat < Location
+class Location::CastleEntrance < Location
   def connections
-    [:road_to_castle, :castle_treasury]
+    [:road_to_castle, :castle]
   end
 
   def describe
@@ -10,7 +10,7 @@ class Location::CastleMoat < Location
   def move_player_to(next_location)
     current_location = self
 
-    if next_location.is?(:castle_treasury)
+    if next_location.is?(:castle)
       guard = current_location.find :guard
       if guard.drunk.eql? true
         player.move_node_to(next_location)

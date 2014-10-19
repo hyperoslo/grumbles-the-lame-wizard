@@ -23,7 +23,7 @@ class NPC::Princess < NPC
   end
 
   def pick_up
-    gate = game.find_in_tree :castle_gate
+    gate = player.parent.find :castle_gate
 
     if gate.open.eql? true
       treasury = player.parent

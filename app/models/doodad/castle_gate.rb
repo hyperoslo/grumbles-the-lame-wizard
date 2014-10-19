@@ -12,7 +12,7 @@ class Doodad::CastleGate < Doodad
   end
 
   def unlock
-    if player.find :princess
+    if player.find(:princess) || player.parent.find(:princess)
       "I think it's not the best idea to open <strong>castle_gate</strong>. <strong>guard</strong> will catch us and put use in a <strong>vault</strong>"
     else
       @open = true
@@ -25,11 +25,7 @@ class Doodad::CastleGate < Doodad
       "The gate is opened, guard can sober and come anytime."
     else
       princess = game.find_in_tree(:princess) || game.find_in_tree(:sloth)
-      "Nobody can get in. I'm tete-a-tete with you, my lovely #{princess.id}"
+      "Nobody can get in. I'm tete-a-tete with my destiny."
     end
-  end
-
-  def describe
-    'The castle gate is what shields the treasury from the outside world.'
   end
 end
