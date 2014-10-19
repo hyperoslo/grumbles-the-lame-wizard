@@ -46,11 +46,9 @@ class BaseEntity
   end
 
   def game
-    @game ||= begin
-      entity = self
-      entity = entity.parent while entity.parent
-      entity
-    end
+    entity = self
+    entity = entity.parent while entity.parent
+    entity
   end
 
   def player
