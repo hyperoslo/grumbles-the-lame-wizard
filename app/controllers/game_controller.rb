@@ -19,56 +19,42 @@ class GameController < ApplicationController
   end
 
   def handle
-    method = internal_method params[:verb]
+    return error 400, missing_method if method.nil?
+    return error 404, missing_entity if entity.nil?
+    return error 404, missing_other_entity if params[:other_entity] && other_entity.nil?
 
-    if method == :move_to
-      text = <<-HTML
-        <div class="response">
-          #{game.player.current_location.move_player_to(params[:entity])}
-        </div>
-      HTML
+    # Delegate to controller, interaction factory or entity
+    text = if respond_to? method, true
+             send(method, entity)
+           elsif other_entity
+             InteractionFactory.new(entity, other_entity).perform(method)
+           else
+             entity.send method
+           end
 
-    elsif method.present?
-      entity       = game.player.references params[:entity]
-      other_entity = game.player.references params[:other_entity]
-
-      if entity.nil?
-        text = <<-HTML
-          <div class="response error">
-            <strong>#{params[:entity]}</strong> does not really exist, it’s all in your mind.
-          </div>
-        HTML
-
-      else
-        text = if other_entity
-                 InteractionFactory.new(entity, other_entity).perform(method)
-               else
-                 entity.send method
-               end
-
-        text = <<-HTML
-          <div class="response">
-            #{text}
-          </div>
-        HTML
-      end
-    else
-      text = <<-HTML
-        <div class="response error">
-          You try to <strong>#{params[:verb]}</strong>, but realize you have no idea how to do that.
-        </div>
-      HTML
-    end
-
-    render text: text
+    success text
 
     save!
   end
 
   protected
 
-  def game
-    @game ||= load! || Game.template
+  def search(entity)
+    if entity.in? [game.player, game.player.current_location]
+      entity.search
+    else
+      "You can’t search <strong>#{entity.id}</strong>"
+    end
+  end
+
+  def move_to(next_location)
+    current_location = game.player.current_location
+
+    if current_location == next_location
+      "You already are there"
+    else
+      current_location.move_player_to next_location
+    end
   end
 
   private
@@ -87,7 +73,47 @@ class GameController < ApplicationController
     session[:session_id]
   end
 
-  def internal_method(funny)
-    INTERNAL_METHOD_NAMES.fetch(funny) { nil }
+  def game
+    @game ||= load! || Game.template
+  end
+
+  def method
+    INTERNAL_METHOD_NAMES[params[:verb]]
+  end
+
+  def entity
+    game.player.references params[:entity]
+  end
+
+  def other_entity
+    game.player.references params[:other_entity]
+  end
+
+  def missing_method
+    <<-HTML
+      <div class="error">
+        You try to <strong>#{params[:verb]}</strong>, but realize you have no idea how to do that.
+      </div>
+    HTML
+  end
+
+  def missing_other_entity
+    missing_entity params[:other_entity]
+  end
+
+  def missing_entity(id = params[:entity])
+    <<-HTML
+      <div class="error">
+        There is no <strong>#{id}</strong> nearby.
+      </div>
+    HTML
+  end
+
+  def success(text)
+    render json: { response: text, status: 'success' }
+  end
+
+  def error(status, text)
+    render status: status, json: { response: text, status: 'error' }
   end
 end

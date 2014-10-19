@@ -15,7 +15,7 @@ $prompt-width: 50px
   padding-right: 0
 
 .response
-  margin-left: $prompt-width
+  padding: $prompt-width $prompt-width/2
 
 .prompt, input[type=text]
   height: 100px
@@ -23,9 +23,10 @@ $prompt-width: 50px
 
 output
   position: absolute
-  top: $prompt-width
-  left: 0
+  top: 0
   bottom: 100px
+  left: 0
+  right: 0
   overflow: auto
 
 form
