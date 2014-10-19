@@ -7,15 +7,12 @@ class Location::Courtyard < Location
     'Courtyard is central place of magical city'
   end
 
-  def move_player_to(next_location_key)
+  def move_player_to(next_location)
     current_location = self
-    next_location = current_location.parent.find_in_tree next_location_key.to_sym
 
     hedge = current_location.find :hedge
 
-    if current_location.id.eql? next_location_key.to_sym
-      "You are already in #{next_location_key}"
-    elsif next_location_key == "bank"
+    if next_location.is? :bank
       if hedge.nil?
         player.move_node_to(next_location)
         "Nothing can stop powerfull wizard, which luckly I am!"
@@ -25,11 +22,9 @@ class Location::Courtyard < Location
         player.move_node_to(next_location)
         "Nothing can stop powerfull wizard, which luckly I am!"
       end
-    elsif connects_to? next_location_key.to_sym
-      player.move_node_to(next_location)
-      "Woohoo, you moved, now you are in #{next_location_key}"
     else
-      "That location is way too far"
+      player.move_node_to(next_location)
+      "Woohoo, you moved, now you are in <strong>#{next_location.id}</strong>"
     end
   end
 
