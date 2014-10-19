@@ -11,7 +11,11 @@
 
   .response
     white-space: pre-wrap
-    padding: $prompt-width $prompt-width/2
+    padding: 40px 25px
+    border-bottom: 1px solid #DDDDDD
+
+    &:last-child
+      border-bottom-style: dashed
 
   .prompt, input[type=text]
     height: 100px
@@ -32,11 +36,14 @@
 
   output
     position: absolute
-    top: 0
+    top: 35px
     bottom: 100px
     left: 0
     right: 0
     overflow: auto
+
+    *
+      font-size: 25px
 
   ul
     list-style-type: square
@@ -48,6 +55,8 @@
     position: absolute
     bottom: 0
     left: 0
+    right: 0
+    border-top: 3px double #999999
 
   input[type=text]
     width: calc(100%  - #{$prompt-width})
