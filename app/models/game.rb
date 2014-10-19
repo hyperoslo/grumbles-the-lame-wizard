@@ -10,6 +10,7 @@ class Game < BaseEntity
         add_node Item::Shoes.new
         add_node Wizard.new {
           add_node Item::GameManual.new
+          add_node Item::Letter.new
           add_node Item::Floppy.new
           add_node Item::Hearthstone.new
         }
