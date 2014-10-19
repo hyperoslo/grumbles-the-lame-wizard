@@ -83,11 +83,19 @@ class GameController < ApplicationController
   end
 
   def entity
-    game.player.references params[:entity]
+    if params[:entity] == "room"
+      game.player.current_location
+    else
+      game.player.references params[:entity]
+    end
   end
 
   def other_entity
-    game.player.references params[:other_entity]
+    if params[:other_entity] == "room"
+      game.player.current_location
+    else
+      game.player.references params[:other_entity]
+    end
   end
 
   def missing_method
