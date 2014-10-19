@@ -13,6 +13,8 @@ class Item::Hearthstone < Item
       - Sindre Moen (@sindrenm)
       - Tim Kurvers (@timkurvers)
       HTML
+    elsif game.find(:castle).find(:princess) || game.find(:castle).find(:sloth)
+      'WOOOSSHH! I’m back at the <strong>inn</strong>. Didn\'t i forget something in the <strong>castle</strong>?'
     else
       'WOOOSSHH! I’m back at the <strong>inn</strong>.'
     end
