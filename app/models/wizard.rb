@@ -45,4 +45,12 @@ class Wizard < BaseEntity
     'I throw myself to the ground and pick myself up again.'
   end
 
+  def talk_to
+    <<-HTML
+    <strong>me</strong>: ... and then she said ‘Oh my God, how could he do that?’
+    <strong>me</strong>: I know, right!? It’s totally unacceptable.
+    <strong>me</strong>: Some people are just outright rude!
+    HTML
+  end
+
 end
