@@ -27,8 +27,4 @@ class Location < BaseEntity
     end.join '<br>'
   end
 
-  def move_allowed?(target)
-    true
-  end
-
 end
