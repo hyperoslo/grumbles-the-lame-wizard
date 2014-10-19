@@ -25,6 +25,8 @@ class Item::GameManual < Item
       <dd>Patch <em>resource</em> and make it less broken or more fixed.</dd>
       <dt>DELETE <em>resource</em></dt>
       <dd>Get rid of <em>resource</em> entirely.</dd>
+      <dt>PUT <em>resource</em></dt>
+      <dd>Self-explanatory.</dd>
     </dl>
     HTML
   end
