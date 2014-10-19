@@ -41,4 +41,8 @@ class Wizard < BaseEntity
     end
   end
 
+  def pick_up
+    'I throw myself to the ground and pick myself up again.'
+  end
+
 end

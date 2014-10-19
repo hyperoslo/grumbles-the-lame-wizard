@@ -7,7 +7,7 @@ class Item::KeyBlueprint < Item
       "Why would I need a key blueprint?"
     elsif dwarf.happy.eql? false
       <<-HTML
-      Dwarves are known to be greedy. <strong>forged_dwarf</strong> won't give me the <strong>key_blueprint</strong>.
+      Dwarves are known to be greedy. <strong>forged_dwarf</strong> won’t give me the <strong>key_blueprint</strong>.
 
       I might need to give him something in exchange.
       HTML
