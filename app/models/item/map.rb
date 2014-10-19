@@ -3,6 +3,11 @@ class Item::Map < Item
     map.gsub(" ", "&nbsp").prepend('<div class="map">').concat('</div>')
   end
 
+  def pick_up
+    move_node_to player
+    'I’ve put the map in my pants.'
+  end
+
   private
 
   def map
