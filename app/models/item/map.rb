@@ -1,12 +1,12 @@
 class Item::Map < Item
   def describe
-    map
+    map.gsub(" ", "&nbsp").prepend('<div class="map">').concat('</div>')
   end
 
   private
 
   def map
-    """
+    '''
                                                #################
                                                #               #
                       ###########              #               #
@@ -48,6 +48,6 @@ class Item::Map < Item
                                            #                  #  treasury  #
                                            #                  #            #
                                            #################################
-    """
+    '''
   end
 end
