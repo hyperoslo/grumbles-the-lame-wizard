@@ -38,6 +38,10 @@ class GameController < ApplicationController
     save!
   end
 
+  def state
+    render text: game.to_yaml, content_type: 'text/yaml'
+  end
+
   protected
 
   def search(entity)
