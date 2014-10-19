@@ -102,4 +102,8 @@ class BaseEntity
   def describe
     'Nothing to see here. Move along.'
   end
+
+  def drop
+    'You don’t want to drop THAT.'
+  end
 end
