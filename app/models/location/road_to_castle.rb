@@ -11,7 +11,7 @@ class Location::RoadToCastle < Location
     current_location = self
 
     if next_location.is?(:castle_entrance)
-      if player.find :holy_shoes
+      if player.in_shoes
         player.move_node_to(next_location)
         "I’m walking on water! EAT THAT crocolisks. Arrived at the <strong>castle_entrance</strong>."
       else

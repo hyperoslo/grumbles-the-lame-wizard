@@ -18,6 +18,6 @@ class Item::KeyBlueprint < Item
   end
 
   def describe
-    "It’s a blueprint for key."
+    "It’s a blueprint for a key."
   end
 end
