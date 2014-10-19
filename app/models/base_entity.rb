@@ -63,8 +63,8 @@ class BaseEntity
     end.join '<br>'
   end
 
-  def list_contents
-    "#{id} contains:<br>#{list_entities}"
+  def search
+    'You can’t search that.'
   end
 
   def pick_up
