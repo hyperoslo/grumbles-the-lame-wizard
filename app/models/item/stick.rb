@@ -18,7 +18,7 @@ class Item::Stick < Item
     end
   end
 
-  def pickup
+  def pick_up
     move_node_to player
     'Ah, your trusted stick.'
   end
