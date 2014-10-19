@@ -10,7 +10,7 @@ class NPC::Guard < NPC
     if @drunk
       "Drunk as a lord, pff.. weakling. I can drink twice as much!"
     else
-      'The <strong>guard</strong> watches the castle grounds 24/7.'
+      'The <strong>guard</strong> watches the <strong>castle</strong> grounds 24/7.'
     end
   end
 

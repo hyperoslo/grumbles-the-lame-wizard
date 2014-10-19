@@ -4,7 +4,7 @@ class Item::Floppy < Item
     <<-HTML
       Contains my game state.
 
-      <strong>DELETE</strong> the floppy to reset the game.
+      <strong>DELETE</strong> the <strong>floppy</strong> to reset the game.
     HTML
   end
 

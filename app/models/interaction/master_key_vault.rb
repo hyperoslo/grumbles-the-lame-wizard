@@ -5,6 +5,6 @@ class Interaction::MasterKeyVault < Interaction
 
     key.move_node_to vault
 
-    "The <strong>master_key</strong> fits the vault keyhole perfectly. Shall I unlock it?"
+    "The <strong>master_key</strong> fits the <strong>vault</strong> keyhole perfectly. Shall I unlock it?"
   end
 end

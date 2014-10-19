@@ -20,7 +20,7 @@ class Item::Stick < Item
 
   def pick_up
     move_node_to player
-    'Ah, my trusted stick.'
+    'Ah, my trusted <strong>stick</strong>.'
   end
 
   def describe
@@ -29,7 +29,7 @@ class Item::Stick < Item
     elsif @with_crystal
       'My trusted stick with a crystal socketed onto it.'
     else
-      'My trusted stick. It has a socket at the end.'
+      'My trusted <strong>stick</strong>. It has a socket at the end.'
     end
   end
 end

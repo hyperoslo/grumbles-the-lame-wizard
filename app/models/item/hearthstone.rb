@@ -19,6 +19,6 @@ class Item::Hearthstone < Item
   end
 
   def describe
-    "Nothing is be better than home, sweet home. This <strong>hearthstone</strong> may <strong>GET</strong> me back to my lovely inn."
+    "Nothing is be better than home, sweet home. This <strong>hearthstone</strong> may <strong>GET</strong> me back to my lovely <strong>inn</strong>."
   end
 end

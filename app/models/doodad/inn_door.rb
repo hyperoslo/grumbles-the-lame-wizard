@@ -9,17 +9,17 @@ class Doodad::InnDoor < Doodad
 
   def unlock
     if @open
-      'I’ve already unlocked the door.'
+      'I’ve already unlocked the <strong>inn_door</strong>.'
     elsif self.find 'inn_key'
       @open = true
-      'I swiftly unlock the inn door. The <strong>courtyard</strong> appears.'
+      'I swiftly unlock the <strong>inn_door</strong>. The <strong>courtyard</strong> appears.'
     else
-      'It\'s impossible to unlock this door without a key.'
+      'It’s impossible to unlock this door without an <strong>inn_key</strong>.'
     end
   end
 
   def describe
-    'A very ordinary inn door.'
+    'A very ordinary <strong>inn_door</strong>.'
   end
 
 end

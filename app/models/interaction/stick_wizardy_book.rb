@@ -9,7 +9,7 @@ class Interaction::StickWizardyBook < Interaction
       stick.epic = true
       "Wow, such <strong>epic_wand</strong>, very wizardy, many power, I like."
     else
-      "My stick is too lame to unleash such a powerful spell on it."
+      "My <strong>stick</strong> is too lame to unleash such a powerful spell on it."
     end
   end
 end

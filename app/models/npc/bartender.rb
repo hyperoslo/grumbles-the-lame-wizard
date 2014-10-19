@@ -1,6 +1,6 @@
 class NPC::Bartender < NPC
   def describe
-    'He seems oddly quiet for a bartender.'
+    'He seems oddly quiet for a <strong>bartender</strong>.'
   end
 
   def talk_to

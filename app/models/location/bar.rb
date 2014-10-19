@@ -4,6 +4,6 @@ class Location::Bar < Location
   end
 
   def describe
-    'Apart from the wine being seemingly infinite, this is a fairly ordinary bar.'
+    'Apart from the <strong>wine</strong> being seemingly infinite, this is a fairly ordinary <strong>bar</strong>.'
   end
 end
