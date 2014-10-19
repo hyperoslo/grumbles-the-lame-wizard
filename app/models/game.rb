@@ -40,6 +40,8 @@ class Game < BaseEntity
       add_node Location::ChurchLibrary.new {
         add_node Item::WizardyBook.new
         add_node Item::BlacksmithingBook.new
+        add_node Doodad::PreciousBook1.new
+        add_node Doodad::PreciousBook2.new
       }
 
       # Forgery
