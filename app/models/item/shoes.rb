@@ -8,7 +8,7 @@ class Item::Shoes < Item
 
   def id
     if @holly
-      :holly_shoes
+      :holy_shoes
     else
       :holey_shoes
     end

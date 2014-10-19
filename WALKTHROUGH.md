@@ -28,7 +28,7 @@ MOVE bank
 COPY master_key
 MOVE courtyard
 MOVE road_to_castle
-MERGE holly_shoes river
+MERGE holy_shoes river
 MOVE castle_moat
 MERGE guard wine
 MOVE castle_treasury
