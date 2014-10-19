@@ -3,7 +3,7 @@ class NPC::InsectHunters < NPC
 
   def initialize
     super
-    @active false
+    @active = false
   end
 
 end
