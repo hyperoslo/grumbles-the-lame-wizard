@@ -1,6 +1,6 @@
 class Item::Map < Item
   def describe
-    map.gsub("\n", "<br>").gsub(" ", "&nbsp")
+    map
   end
 
   private

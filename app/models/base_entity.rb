@@ -60,7 +60,7 @@ class BaseEntity
   def list_entities
     children.map do |child|
       " - <strong>#{child.id}</strong>"
-    end.join '<br>'
+    end.join "\n"
   end
 
   def search

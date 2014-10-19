@@ -11,7 +11,7 @@ class Wizard < BaseEntity
   end
 
   def search
-    "You are currently carrying:<br><br>#{list_entities}"
+    "You are currently carrying:\n\n#{list_entities}"
   end
 
   def references(id)

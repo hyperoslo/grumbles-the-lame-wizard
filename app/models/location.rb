@@ -16,19 +16,17 @@ class Location < BaseEntity
   def list_connections
     connections.map do |connection|
       " - <strong>#{connection}</strong>"
-    end.join '<br>'
+    end.join "\n"
   end
 
   def search
     <<-HTML
-      You look around the <strong>#{id}</strong>, seeing:<br>
-      <br>
+      You look around the <strong>#{id}</strong>, seeing:
+
       #{list_entities}
 
-      <br><br>
+      The <strong>#{id}</strong> connects to:
 
-      The <strong>#{id}</strong> connects to:<br>
-      <br>
       #{list_connections}
     HTML
   end
