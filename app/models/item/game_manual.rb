@@ -3,10 +3,10 @@ class Item::GameManual < Item
   def describe
     <<-HTML
     <dl class="game-manual">
-      <dt>SEARCH <em>resource</em></dt>
-      <dd>List items in <em>resource</em>. Quite handy at times. Try <strong>SEARCH me</strong></dd>
       <dt>TRACE <em>resource</em></dt>
-      <dd>Inspect <em>resource</em> with a keen eye. Or at least look at it closer. Try <strong>TRACE me</strong></dd>
+      <dd>Inspect <em>resource</em> with a keen eye. Try <strong>TRACE me</strong> or <strong>TRACE room</strong>.</dd>
+      <dt>SEARCH <em>resource</em></dt>
+      <dd>List items in <em>resource</em>. Try <strong>SEARCH me</strong> or <strong>SEARCH room</strong>.</dd>
       <dt>GET <em>resource</em></dt>
       <dd>Pick up <em>resource</em>. But only if it’s anywhere near me, obviously.</dd>
       <dt>MOVE <em>location</em></dt>
@@ -18,13 +18,13 @@ class Item::GameManual < Item
       <dt>UNLOCK <em>resource</em></dt>
       <dd>I’ll leave this one for you to figure out.</dd>
       <dt>MERGE <em>resource1</em> <em>resource2</em></dt>
-      <dd>Combine compatible resources, for better or for worse. Can we afford taking that chance?</dd>
+      <dd>Combine compatible resources, for better or for worse.</dd>
       <dt>REPORT <em>listener</em></dt>
-      <dd>Also known as throwing words at <em>listener</em>. Also known as talking to <em>listener</em>. But will he listen?</dd>
+      <dd>Throw words at <em>listener</em>. Also known as talking to <em>listener</em>.</dd>
       <dt>PATCH <em>resource</em></dt>
       <dd>Patch <em>resource</em> and make it less broken or more fixed.</dd>
       <dt>DELETE <em>resource</em></dt>
-      <dd>Throw <em>resource</em> on the ground and step on it multiple times until it’s completely gone.</dd>
+      <dd>Get rid of <em>resource</em> entirely.</dd>
     </dl>
     HTML
   end
