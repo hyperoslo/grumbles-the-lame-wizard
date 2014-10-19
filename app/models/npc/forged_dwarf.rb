@@ -20,4 +20,7 @@ class NPC::ForgedDwarf < NPC
     end
   end
 
+  def describe
+    "Is he dwarf or hobbit?"
+  end
 end
