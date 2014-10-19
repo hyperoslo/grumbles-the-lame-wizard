@@ -103,7 +103,7 @@ class GameController < ApplicationController
   end
 
   def success(text)
-    render json: { response: text, status: 'success' }
+    render json: { response: trim(text), status: 'success' }
   end
 
   def error(status, text)
