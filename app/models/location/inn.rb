@@ -10,15 +10,15 @@ class Location::Inn < Location
     door = current_location.find :inn_door
 
     if door.open.eql? false
-      "It seems door is closed, if there is a lock there should be the key"
+      'The inn door is closed, there has to be a key nearby?'
     else
       player.move_node_to(next_location)
-      "Woohoo, you moved to the #{next_location.id}"
+      'You make your way to the courtyard.'
     end
   end
 
   def describe
-    'Beautiful inn, such precious furniture'
+    'An ordinary inn. The usual.'
   end
 
 end
