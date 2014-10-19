@@ -64,15 +64,11 @@ class BaseEntity
   end
 
   def search
-    'You can’t search that.'
+    'I can’t search that.'
   end
 
   def pick_up
-    'I wouldn’t pick that up if I were you.'
-  end
-
-  def move_to
-    'You try to move, but you can’t.'
+    'Nah, I don’t want to pick that up.'
   end
 
   def duplicate
@@ -80,11 +76,11 @@ class BaseEntity
   end
 
   def lock
-    'Are you being paranoid?'
+    'I’m a wizard, not a locksmith!'
   end
 
   def unlock
-    'You’re a wizard, not a lockpicker!'
+    'I’re a wizard, not a lockpicker!'
   end
 
   def merge
@@ -92,18 +88,18 @@ class BaseEntity
   end
 
   def talk_to
-    'You report it, but nobody cares.'
+    'Nobody’s listening to me!'
   end
 
   def patch
-    'You feel like you don’t need to patch this.'
+    'I don’t feel like patching this.'
   end
 
   def describe
-    'Nothing to see here. Move along.'
+    'Nothing to see here. Moving along.'
   end
 
   def drop
-    'You don’t want to drop THAT.'
+    'I don’t want to drop THAT.'
   end
 end
