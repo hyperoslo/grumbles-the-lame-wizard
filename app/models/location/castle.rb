@@ -1,6 +1,6 @@
 class Location::Castle < Location
   def connections
-    [:castle_moat]
+    [:castle_entrance]
   end
 
   def reset

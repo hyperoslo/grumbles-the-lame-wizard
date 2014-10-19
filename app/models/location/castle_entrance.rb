@@ -1,4 +1,4 @@
-class Location::CastleMoat < Location
+class Location::CastleEntrance < Location
   def connections
     [:road_to_castle, :castle]
   end
