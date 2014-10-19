@@ -1,10 +1,12 @@
-<form ng-controller="FormCtrl as formCtrl"
-  ng-submit="formCtrl.submit()" name="formCtrl.form">
+<div class="game">
+  <form ng-controller="FormCtrl as formCtrl"
+    ng-submit="formCtrl.submit()" name="formCtrl.form">
 
-  <label class="prompt">$</label><input
-    type="text" name="command" id="command"
-    ng-model="formCtrl.command" required autofocus />
+    <label class="prompt">$</label><input
+      type="text" name="command" id="command"
+      ng-model="formCtrl.command" required autofocus />
 
-</form>
+  </form>
 
-<form-output></form-output>
+  <form-output></form-output>
+</div>

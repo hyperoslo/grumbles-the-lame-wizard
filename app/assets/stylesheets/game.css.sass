@@ -1,0 +1,61 @@
+.game
+  $prompt-width: 50px
+
+  *
+    font-size: 50px
+
+  .prompt
+    width: $prompt-width
+    color: gray
+    padding-right: 0
+
+  .response
+    white-space: pre-wrap
+    padding: $prompt-width $prompt-width/2
+
+  .prompt, input[type=text]
+    height: 100px
+    padding: 10px
+
+  .game-manual
+    dt, dd, em, strong
+      font-size: 20px
+
+    dt
+      font-weight: bold
+      margin-top: -65px
+
+    dd
+      margin-top: -85px
+      margin-left: 1.5em
+
+  output
+    position: absolute
+    top: 0
+    bottom: 100px
+    left: 0
+    right: 0
+    overflow: auto
+
+  ul
+    list-style-type: square
+    margin: 0
+    padding: 0
+    margin-left: 1.5em
+
+  form
+    position: absolute
+    bottom: 0
+    left: 0
+
+  input[type=text]
+    width: calc(100%  - #{$prompt-width})
+    padding-left: 0
+    margin-left: 0
+    border: none
+
+    &:focus
+      outline: none
+
+  .error
+    color: red

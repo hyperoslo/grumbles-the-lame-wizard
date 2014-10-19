@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
-  root to: 'game#index'
+  root to: 'landing#index'
 
-  match ':verb/:entity(/:other_entity)', to: 'game#handle', via: :post
+  namespace :game, path: 'cli' do
+    root action: :index
+    post ':verb/:entity(/:other_entity)', action: :handle, as: :action
+  end
 end
