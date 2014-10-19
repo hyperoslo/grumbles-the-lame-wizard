@@ -3,10 +3,6 @@ class Location::Castle < Location
     [:castle_moat]
   end
 
-  def describe
-    'Beautiful princess and chest full of gold, what could be better?'
-  end
-
   def reset
     guard = game.find_in_tree :guard
     guard.drunk = false

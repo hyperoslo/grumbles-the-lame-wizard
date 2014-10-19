@@ -15,11 +15,13 @@ class Doodad::Vault < Doodad
 
       treasury.reset
     elsif master_key.nil?
-      "Vault requires master key, where can I find it?"
+      "Vault requires <strong>master_key</strong>, where can I find it?"
     else
       castle = self.parent
-      castle.children << NPC::Princess.new
       castle.children.delete(self)
+      princess = NPC::Princess.new
+      princess.move_node_to castle
+      "Vault opens, from shadow appears ... <strong>sloth</strong>"
     end
   end
 
@@ -35,13 +37,4 @@ class Doodad::Vault < Doodad
       "Heavy but nice"
     end
   end
-
-  def id
-    if @open
-      :gold
-    else
-      :chest
-    end
-  end
-
 end

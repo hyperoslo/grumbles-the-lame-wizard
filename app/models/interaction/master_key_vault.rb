@@ -3,8 +3,8 @@ class Interaction::MasterKeyVault < Interaction
     key = objects["master_key"]
     vault = objects["vault"]
 
-    key.mode_node_to value
+    key.move_node_to vault
 
-    "<strong>master_key</strong> fit in vault socket perfectly. Shell I <strong>unlock</strong> it?"
+    "<strong>master_key</strong> fits in vault socket perfectly. Shell I <strong>unlock</strong> it?"
   end
 end
