@@ -10,7 +10,7 @@ class Location::Castle < Location
     courtyard = game.find :courtyard
     player.move_node_to courtyard
 
-    "Aii, the <strong>guard</strong> came and kicked me out of the castle onto the <strong>courtyard</strong>. Happiness was so close.."
+    "Aii, the <strong>guard</strong> came and kicked me out of the <strong>castle</strong> onto the <strong>courtyard</strong>. Happiness was so close.."
   end
 
   def move_player_to(next_location)

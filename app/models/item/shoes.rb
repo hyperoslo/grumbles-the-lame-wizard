@@ -20,7 +20,7 @@ class Item::Shoes < Item
       self.holy = true
       "Sacred chants scared the ’e’ out of ’holey’. There are <strong>holy_shoes</strong> in my bag now, cheers!"
     else
-      "I perform sacred chants on my shoes, but it doesn't seem to work in the <strong>#{location.id}</strong>."
+      "I perform sacred chants on my <strong>holey_shoes</strong>, but it doesn't seem to work in the <strong>#{location.id}</strong>."
     end
   end
 
@@ -40,14 +40,14 @@ class Item::Shoes < Item
 
   def pick_up
     move_node_to player
-    "Ah, my trusted holey shoes. Seriously, I should get them repaired."
+    "Ah, my trusted <strong>holey_shoes</strong>. Seriously, I should get them repaired."
   end
 
   def describe
     if self.holy
       "Holy fucking shoes!"
     else
-      "My trusted <strong>holey</strong> shoes. Seriously, I should get them repaired."
+      "My trusted <strong>holey_shoes</strong>. Seriously, I should get them repaired."
     end
   end
 end

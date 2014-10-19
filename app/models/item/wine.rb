@@ -6,7 +6,7 @@ class Item::Wine < Item
 
   def describe
     <<-HTML
-      Chiteau Haut-Brion 1959, magnificent wine. I love French wine, like I love the French language.
+      Chiteau Haut-Brion 1959, magnificent <strong>wine</strong>. I love French <strong>wine</strong>, like I love the French language.
 
       I have sampled every language, French is my favourite - fantastic language, especially to curse with.
 

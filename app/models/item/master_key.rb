@@ -8,7 +8,7 @@ class Item::MasterKey < Doodad
 
   def pick_up
     @tried = true
-    'The <strong>master_key</strong> is behind a <strong>glass_pane</strong>. The goblin won’t allow me anywhere near the original one.'
+    'The <strong>master_key</strong> is behind a <strong>glass_pane</strong>. The <strong>goblin</strong> won’t allow me anywhere near the original one.'
   end
 
   def duplicate
@@ -30,7 +30,7 @@ class Item::MasterKey < Doodad
     if parent == player
       "Not the original - but still fully functional - <strong>master_key</strong>. Locks await!"
     else
-      "A fabulously shiny master key well protected behind a glass pane."
+      "A fabulously shiny master key well protected behind a <strong>glass_pane</strong>."
     end
   end
 end

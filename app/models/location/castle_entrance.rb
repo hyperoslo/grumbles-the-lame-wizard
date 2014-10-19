@@ -4,7 +4,7 @@ class Location::CastleEntrance < Location
   end
 
   def describe
-    'The <strong>guard</strong> watches the castle grounds 24/7. No entrance for pleb wizards.'
+    'The <strong>guard</strong> watches the <strong>castle</strong> grounds 24/7. No entrance for pleb wizards.'
   end
 
   def move_player_to(next_location)
@@ -14,7 +14,7 @@ class Location::CastleEntrance < Location
       guard = current_location.find :guard
       if guard.drunk.eql? true
         player.move_node_to(next_location)
-        "I will sneak into the castle while the <strong>guard</strong> is drunk. The beautiful princess and untold riches await!"
+        "I will sneak into the <strong>castle</strong> while the <strong>guard</strong> is drunk. The beautiful <strong>princess</strong> and untold riches await!"
       else
         describe
       end

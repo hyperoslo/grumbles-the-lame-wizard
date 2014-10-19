@@ -2,9 +2,9 @@ class Item::InnKey < Item
 
   def describe
     if parent == player
-      'An ordinary inn door key, covered in grog.'
+      'An ordinary <strong>inn_door</strong> key, covered in grog.'
     else
-      'An ordinary inn door key, ready for the taking.'
+      'An ordinary <strong>inn_door</strong> key, ready for the taking.'
     end
   end
 

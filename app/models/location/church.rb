@@ -7,7 +7,7 @@ class Location::Church < Location
     if self.find :insects
       'Spiders and bugs <strong>bar</strong> my way! It seems libraries aren’t that popular nowadays.'
     else
-      'The <strong>church</strong> is cleansed of insects. A holy spirit fills the air.'
+      'The <strong>church</strong> is cleansed of <strong>insects</strong>. A holy spirit fills the air.'
     end
   end
 
@@ -22,7 +22,7 @@ class Location::Church < Location
       else
         hunters = game.find_in_tree :insect_hunters
         hunters.active = true
-        "I'm very afraid of insects! Perhaps I need some help to advance."
+        "I'm very afraid of <strong>insects</strong>! Perhaps I need some help to advance."
       end
     else
       super

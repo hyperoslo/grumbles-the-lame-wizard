@@ -9,9 +9,9 @@ class Interaction::CrystalStick < Interaction
     player.children.delete(crystal)
 
     <<-HTML
-    AHA! A <strong>crystal_stick</strong>!
+      AHA! A <strong>crystal_stick</strong>!
 
-    It’s no longer lame, but still not at its full power.
+      It’s no longer lame, but still not at its full power.
     HTML
   end
 end
