@@ -11,6 +11,7 @@ class GameController < ApplicationController
     'PATCH'  => :patch,
     'DELETE' => :drop,
     'TRACE'  => :describe,
+    'PUT'    => :put,
   }
 
   respond_to :html, :json

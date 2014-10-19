@@ -1,4 +1,5 @@
 class Wizard < BaseEntity
+  attr_accessor :in_shoes
 
   def id
     :me
