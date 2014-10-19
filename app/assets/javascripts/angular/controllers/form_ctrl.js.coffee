@@ -18,6 +18,6 @@ angular.module("grumbles")
           @command = ""
 
         .error (data, status, headers, config) ->
-          console.error "Everything sucks ...", data
+          Output.add data if angular.isObject(data)
 
     this

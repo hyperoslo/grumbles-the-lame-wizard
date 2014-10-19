@@ -3,9 +3,10 @@ angular.module("grumbles")
     @log = []
 
     combinedLog: =>
-      @log.join "<br>"
+      @log.map (data) ->
+        "<div class=\"response #{data.status}\">#{data.response}</div>"
+      .join ""
 
-    add: (text) =>
-      @log.push text
-
+    add: (data) =>
+      @log.push data
       $rootScope.$emit "outputChanged"
