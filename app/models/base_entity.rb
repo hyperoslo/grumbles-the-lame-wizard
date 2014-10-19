@@ -15,7 +15,7 @@ class BaseEntity
   end
 
   def is?(id)
-    self.id == id.to_sym
+    self == id || self.id == id.to_sym
   end
 
   def add_node(target)
@@ -63,8 +63,8 @@ class BaseEntity
     end.join '<br>'
   end
 
-  def list_contents
-    "#{id} contains:<br>#{list_entities}"
+  def search
+    'You can’t search that.'
   end
 
   def pick_up
@@ -101,5 +101,9 @@ class BaseEntity
 
   def describe
     'Nothing to see here. Move along.'
+  end
+
+  def drop
+    'You don’t want to drop THAT.'
   end
 end
