@@ -57,8 +57,10 @@ class GameController < ApplicationController
 
     if current_location == next_location
       "Hey, I’m already there!"
-    else
+    elsif current_location.connects_to? next_location
       current_location.move_player_to next_location
+    else
+      "That won’t work!"
     end
   end
 
