@@ -3,7 +3,7 @@ class Item::Hearthstone < Item
     player.move_node_to game.find(:inn)
     if player.find :princess
       <<-HTML
-      <strong>WOOOSSHH!</strong>
+      WOOOSSHH!
 
       And they lived happily ever after.
 
@@ -14,7 +14,7 @@ class Item::Hearthstone < Item
       - Tim Kurvers (@timkurvers)
       HTML
     else
-      '<strong>WOOOSSHH!</strong> I’m back at the <strong>inn</strong>.'
+      'WOOOSSHH! I’m back at the <strong>inn</strong>.'
     end
   end
 
