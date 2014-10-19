@@ -48,7 +48,7 @@ class GameController < ApplicationController
     if entity.in? [game.player, game.player.current_location]
       entity.search
     else
-      "I can’t search <strong>#{entity.id}</strong>"
+      "I can’t search <strong>#{entity.id}</strong>."
     end
   end
 
