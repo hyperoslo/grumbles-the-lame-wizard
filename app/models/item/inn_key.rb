@@ -10,7 +10,11 @@ class Item::InnKey < Item
 
   def pick_up
     self.move_node_to player
-    'Ew, grog all over it! The key must have been abused by its previous owner.'
+    <<-HTML
+      Ew, grog all over it! The key must have been abused by its previous owner.
+
+      I’ve placed the <strong>#{id}</strong> in my inventory.
+    HTML
   end
 
 end
