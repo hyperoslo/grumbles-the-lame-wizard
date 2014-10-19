@@ -25,5 +25,16 @@ class Item::Shoes < Item
   end
 
   def put
+    location = self.player.parent
+    if self.holy == false
+      "No way I put on <strong>holey_shoes</strong>. What I shame!"
+    else
+      if location.id.eql? :road_to_castle
+        self.player.in_shoes = true
+        "Holy fucking shoes, I can walk on the water!"
+      else
+        "I fill pretty comfortable even without shoes, why do I put them on?"
+      end
+    end
   end
 end
