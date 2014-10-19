@@ -6,14 +6,13 @@ class Game < BaseEntity
       add_node Location::Inn.new {
         add_node Item::InnKey.new
         add_node Doodad::InnDoor.new
+        add_node Item::Stick.new
+        add_node Item::Shoes.new
         add_node Wizard.new {
           add_node Item::GameManual.new
           add_node Item::Letter.new
           add_node Item::Floppy.new
-          add_node Item::Shoes.new
-          add_node Item::Stick.new
           add_node Item::Hearthstone.new
-          add_node Item::Map.new
         }
       }
 
@@ -21,6 +20,7 @@ class Game < BaseEntity
       add_node Location::Courtyard.new {
         add_node Doodad::Hedge.new
         add_node Doodad::Sign.new
+        add_node Item::Map.new
       }
 
       # Bar
@@ -68,10 +68,9 @@ class Game < BaseEntity
       }
 
       # Castle Treasury
-      add_node Location::CastleTreasury.new {
+      add_node Location::Castle.new {
         add_node Doodad::CastleGate.new
-        add_node Item::Chest.new
-        add_node NPC::Princess.new
+        add_node Doodad::Vault.new
       }
 
     end

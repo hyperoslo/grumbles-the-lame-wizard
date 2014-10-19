@@ -37,4 +37,9 @@ class Item::Shoes < Item
       end
     end
   end
+
+  def pick_up
+    move_node_to player
+    'Ah, your trusted shoes.'
+  end
 end

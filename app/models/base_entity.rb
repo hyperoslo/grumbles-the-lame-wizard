@@ -87,8 +87,8 @@ class BaseEntity
     'You’re a wizard, not a lockpicker!'
   end
 
-  def merge(other:)
-    'Merging that doesn’t even make any sense.'
+  def merge
+    'Merge with what?'
   end
 
   def talk_to
