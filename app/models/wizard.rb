@@ -8,7 +8,7 @@ class Wizard < BaseEntity
   alias_method :current_location, :parent
 
   def describe
-    "You are Grumbles the lame Wizard standing in the <strong>#{current_location.id}</strong>"
+    "You are Grumbles the lame Wizard standing in the <strong>#{current_location.id}</strong>."
   end
 
   def search

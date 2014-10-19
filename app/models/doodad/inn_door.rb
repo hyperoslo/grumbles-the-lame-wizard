@@ -18,4 +18,8 @@ class Doodad::InnDoor < Doodad
     end
   end
 
+  def describe
+    'A very ordinary inn door.'
+  end
+
 end
