@@ -90,11 +90,7 @@ class GameController < ApplicationController
   end
 
   def missing_method
-    <<-HTML
-      <div class="error">
-        You try to <strong>#{params[:verb]}</strong>, but realize you have no idea how to do that.
-      </div>
-    HTML
+    "You try to <strong>#{params[:verb]}</strong>, but realize you have no idea how to do that."
   end
 
   def missing_other_entity
@@ -102,11 +98,7 @@ class GameController < ApplicationController
   end
 
   def missing_entity(id = params[:entity])
-    <<-HTML
-      <div class="error">
-        There is no <strong>#{id}</strong> nearby.
-      </div>
-    HTML
+    "There is no <strong>#{id}</strong> nearby."
   end
 
   def success(text)
@@ -114,6 +106,10 @@ class GameController < ApplicationController
   end
 
   def error(status, text)
-    render status: status, json: { response: text, status: 'error' }
+    render status: status, json: { response: trim(text), status: 'error' }
+  end
+
+  def trim(text)
+    text.gsub(/^ +/, '')
   end
 end
