@@ -12,7 +12,7 @@ class Doodad::CastleGate < Doodad
   end
 
   def unlock
-    if player.find(:princess) || player.parent.find(:princess)
+    if player.find(:princess) || player.parent.find(:princess) || player.parent.find(:sloth)
       "It’s not the best idea to open <strong>castle_gate</strong> now. <strong>guard</strong> will catch and punish me for sneaking in."
     else
       @open = true
