@@ -24,9 +24,9 @@ Licensed under the **MIT** license, see LICENSE for more information.
     $ bundle install
 
 
-## Environmental variables
+## Environment variables
 
-Copy the sample environmental file and update accordingly:
+Copy the sample environment file and update accordingly:
 
     $ cp .env-sample .env
 
