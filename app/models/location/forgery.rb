@@ -4,6 +4,6 @@ class Location::Forgery < Location
   end
 
   def describe
-    'It\' hot and magical here'
+    'It’s hot and magical here'
   end
 end

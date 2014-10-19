@@ -4,7 +4,7 @@ class Location::Inn < Location
     [ :courtyard ]
   end
 
- def move_player_to(next_location_key)
+  def move_player_to(next_location_key)
     current_location = self
 
     door = current_location.find :inn_door
@@ -17,14 +17,12 @@ class Location::Inn < Location
       next_location = current_location.parent.find_in_tree next_location_key.to_sym
       player.move_node_to(next_location)
       "Woohoo, you moved, now you are in #{next_location_key}"
-     else
+    else
       "That location is way too far"
     end
   end
 
-
-
-  def description
+  def describe
     'Beautiful inn, such precious furniture'
   end
 

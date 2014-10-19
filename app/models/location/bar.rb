@@ -4,6 +4,6 @@ class Location::Bar < Location
   end
 
   def describe
-    'Usuall bar, nothing specific.'
+    'Usual bar, nothing specific.'
   end
 end

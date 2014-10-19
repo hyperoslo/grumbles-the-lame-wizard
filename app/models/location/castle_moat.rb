@@ -4,6 +4,6 @@ class Location::CastleMoat < Location
   end
 
   def describe
-    'moat description and shit'
+    'Moat without a boat'
   end
 end
