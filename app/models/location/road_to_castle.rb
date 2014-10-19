@@ -13,7 +13,7 @@ class Location::RoadToCastle < Location
     if next_location.is?(:castle_moat)
       if player.find :holy_shoes
         player.move_node_to(next_location)
-        "I can walk on the water, what a nonsense, but crocolisks aren't handrance for me anymore! To the castle!"
+        "I can walk on the water, what a nonsense, and crocolisks aren't handrance for me anymore! To the castle!"
       else
         "Norwegian troll on the bridge, he smalls like a big and he is dangerous!"
       end

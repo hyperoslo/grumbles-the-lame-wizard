@@ -11,7 +11,7 @@ class NPC::InsectHunters < NPC
       self.move_node_to player
       "That guys definetly can help me with insects from the church."
     else
-      "I have no business to that gentlement"
+      "I have no business to that gentlemen"
     end
   end
 
