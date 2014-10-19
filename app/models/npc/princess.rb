@@ -40,7 +40,7 @@ class NPC::Princess < NPC
   def talk_to
     if self.cursed
       '<strong>sloth</strong>: EEP. EEP. EEP.'
-    elsif
+    else
       '<strong>princess</strong>: Grumbles, let’s go!'
     end
   end

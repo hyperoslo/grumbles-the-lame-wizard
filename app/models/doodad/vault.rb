@@ -14,7 +14,7 @@ class Doodad::Vault < Doodad
       castle = player.parent
       castle.reset
     elsif master_key.nil?
-      "The vault requires <strong>master_key</strong>, where can I find it?"
+      "The vault requires a <strong>master_key</strong>, where can I find it?"
     else
       castle = self.parent
       castle.children.delete(self)
@@ -22,6 +22,10 @@ class Doodad::Vault < Doodad
       princess.move_node_to castle
       "The vault opens and from the shadows appears ... <strong>sloth</strong>."
     end
+  end
+
+  def describe
+    'It’s a Franz Jäger 1400k vault, supposedly impenetrable and holding the princess.'
   end
 
 end

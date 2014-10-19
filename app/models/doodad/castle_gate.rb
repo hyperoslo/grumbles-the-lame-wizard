@@ -26,7 +26,7 @@ class Doodad::CastleGate < Doodad
     else
       # TODO: Add hint
       # princess = game.find_in_tree(:princess) || game.find_in_tree(:sloth)
-      "Nobody can get in. I'm tête-à -tête with my destiny."
+      "Nobody can get in. I'm tête-à-tête with my destiny."
     end
   end
 end
