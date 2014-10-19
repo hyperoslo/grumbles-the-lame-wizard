@@ -3,7 +3,7 @@ angular.module("grumbles")
     INFO_TEXT = """
       Welcome (back?)!
 
-      There’s a letter in your inventory.
+      There’s a <strong>letter</strong> in your inventory.
       Type <strong>TRACE&nbsp;letter</strong> to read it.
 
       GLHF
