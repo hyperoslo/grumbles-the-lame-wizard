@@ -9,7 +9,7 @@ class Wizard < BaseEntity
 
   def describe
     <<-HTML
-      I am Grumbles the lame Wizard! *flexes*
+      I am Grumbles the Lame Wizard! *flexes*
 
       I’m currently in the <strong>#{current_location.id}</strong>.
     HTML
