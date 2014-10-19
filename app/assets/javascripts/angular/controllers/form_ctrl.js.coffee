@@ -1,5 +1,18 @@
 angular.module("grumbles")
   .controller "FormCtrl", ($http, Output) ->
+    INFO_TEXT = """
+      Welcome (back?)!
+
+      There’s a letter in your inventory.
+      Type <strong>TRACE&nbsp;letter</strong> to read it.
+
+      GLHF
+    """
+
+    Output.add
+      status: "info"
+      response: INFO_TEXT
+
     @commandQueue = []
 
     @submit = ->

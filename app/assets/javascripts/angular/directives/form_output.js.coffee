@@ -5,6 +5,8 @@ angular.module("grumbles")
     scope: {}
 
     link: (scope, element) ->
+      scope.outputHtml = Output.combinedLog()
+
       $rootScope.$on "outputChanged", ->
         scope.outputHtml = Output.combinedLog()
 
