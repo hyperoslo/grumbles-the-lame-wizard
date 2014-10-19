@@ -1,0 +1,6 @@
+We are:
+Sindre Moen
+Tim Kurvers
+Peter Sergeev
+
+Made this shizzle for RailsRumble 2014.
