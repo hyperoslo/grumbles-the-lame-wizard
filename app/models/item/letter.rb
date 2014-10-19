@@ -3,17 +3,19 @@ class Item::Letter < Item
     <<-HTML
       HAI GRUMBLES,
 
-      No doubt you’ve heard of the princess that went missing not long ago.
+      No doubt you’ve heard of the princess that went missing not long ago. We’ve tracked her GPS-enabled crown to a vault in the castle south of here, but no sane person dares venture there.
 
-      We’ve tracked her GPS-enabled crown to a vault in the castle south of here, but no sane person dares venture there.
-
-      It might be worth the risk.
+      In this kingdom, <a href="http://google.com/#q=http+methods" target="_blank">HTTP verbs</a> are used to interact with its inhabitants, locations and items.
 
       To get started, try the following commands:
 
-      $ <strong>TRACE game_manual</strong>
-      $ <strong>SEARCH room</strong>
+      $ <strong>TRACE me</strong>
+      $ <strong>SEARCH me</strong>
       $ <strong>MOVE courtyard</strong>
+
+      For all of the available commands, read the game manual:
+
+      $ <strong>TRACE game_manual</strong>
 
       Yours truly,
 
