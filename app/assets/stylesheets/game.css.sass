@@ -58,8 +58,14 @@
     right: 0
     border-top: 3px double #999999
 
+    &.ng-dirty.ng-invalid-pattern
+      background-color: #FF91A4
+
+      & input
+        background-color: #FF91A4
+
   input[type=text]
-    width: calc(100%  - #{$prompt-width})
+    width: calc(100% - #{$prompt-width})
     padding-left: 0
     margin-left: 0
     border: none

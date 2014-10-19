@@ -13,6 +13,7 @@ angular.module("grumbles")
 
     queryCommand = (command) =>
       return unless command
+      return if @form.$invalid
 
       words = command.query.split ' '
       words.length = 3
