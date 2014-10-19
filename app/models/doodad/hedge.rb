@@ -1,5 +1,5 @@
 class Doodad::Hedge < Doodad
-  attr_reader :open
+  attr_accessor :open
 
   def initialize
     super
