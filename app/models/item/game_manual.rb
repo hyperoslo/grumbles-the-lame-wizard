@@ -4,9 +4,9 @@ class Item::GameManual < Item
     <<-HTML
     <dl class="game-manual">
       <dt>SEARCH <em>resource</em></dt>
-      <dd>List items in <em>resource</em>. Quite handy at times.</dd>
+      <dd>List items in <em>resource</em>. Quite handy at times. Try <strong>SEARCH me</strong></dd>
       <dt>TRACE <em>resource</em></dt>
-      <dd>Inspect <em>resource</em> with a keen eye. Or at least look at it closer.</dd>
+      <dd>Inspect <em>resource</em> with a keen eye. Or at least look at it closer. Try <strong>TRACE me</strong></dd>
       <dt>GET <em>resource</em></dt>
       <dd>Pick up <em>resource</em>. But only if it’s anywhere near you, obviously.</dd>
       <dt>MOVE <em>location</em></dt>
