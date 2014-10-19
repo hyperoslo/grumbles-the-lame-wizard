@@ -63,8 +63,8 @@ class BaseEntity
     end.join '<br>'
   end
 
-  def describe
-    'Nothing to see here. Move along.'
+  def list_contents
+    "#{id} contains:<br>#{list_entities}"
   end
 
   def pick_up
@@ -97,5 +97,9 @@ class BaseEntity
 
   def patch
     'You feel like you don’t need to patch this.'
+  end
+
+  def describe
+    'Nothing to see here. Move along.'
   end
 end

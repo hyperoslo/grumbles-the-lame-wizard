@@ -1,6 +1,6 @@
 class GameController < ApplicationController
   INTERNAL_METHOD_NAMES = {
-    'SEARCH' => :describe,
+    'SEARCH' => :list_contents,
     'GET'    => :pick_up,
     'MOVE'   => :move_to,
     'COPY'   => :duplicate,
@@ -10,6 +10,7 @@ class GameController < ApplicationController
     'REPORT' => :talk_to,
     'PATCH'  => :patch,
     'DELETE' => :drop,
+    'TRACE'  => :describe,
   }
 
   respond_to :html, :json
