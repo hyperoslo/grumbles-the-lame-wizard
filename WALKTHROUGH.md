@@ -1,92 +1,92 @@
 # Walkthrough
 
-GET inn_key
+- GET inn_key
 
-GET lame_stick
+- GET lame_stick
 
-GET holey_shoes
+- GET holey_shoes
 
-MERGE inn_key inn_door
+- MERGE inn_key inn_door
 
-UNLOCK inn_door
+- UNLOCK inn_door
 
-MOVE courtyard
+- MOVE courtyard
 
-MOVE church
+- MOVE church
 
-PATCH holey_shoes
+- PATCH holey_shoes
 
-MOVE church_library
+- MOVE church_library
 
-MOVE courtyard
+- MOVE courtyard
 
-MOVE bar
+- MOVE bar
 
-GET crystal
+- GET crystal
 
-GET insect_hunters
+- GET insect_hunters
 
-GET wine
+- GET wine
 
-MOVE courtyard
+- MOVE courtyard
 
-MOVE church
+- MOVE church
 
-MERGE insects insect_hunters
+- MERGE insects insect_hunters
 
-MOVE church_library
+- MOVE church_library
 
-GET blacksmithing_book
+- GET blacksmithing_book
 
-GET wizardy_book
+- GET wizardy_book
 
-MERGE lame_stick crystal
+- MERGE lame_stick crystal
 
-MERGE crystal_stick wizardy_book
+- MERGE crystal_stick wizardy_book
 
-MOVE church
+- MOVE church
 
-MOVE courtyard
+- MOVE courtyard
 
-MERGE hedge epic_wand
+- MERGE hedge epic_wand
 
-MOVE bank
+- MOVE bank
 
-GET master_key
+- GET master_key
 
-MOVE courtyard
+- MOVE courtyard
 
-MOVE forgery
+- MOVE forgery
 
-MERGE forged_dwarf blacksmithing_book
+- MERGE forged_dwarf blacksmithing_book
 
-GET key_blueprint
+- GET key_blueprint
 
-MOVE courtyard
+- MOVE courtyard
 
-MOVE bank
+- MOVE bank
 
-COPY master_key
+- COPY master_key
 
-MOVE courtyard
+- MOVE courtyard
 
-MOVE road_to_castle
+- MOVE road_to_castle
 
-MOVE castle_entrance
+- MOVE castle_entrance
 
-MERGE guard wine
+- MERGE guard wine
 
-MOVE castle
+- MOVE castle
 
-LOCK castle_gate
+- LOCK castle_gate
 
-MERGE vault master_key
+- MERGE vault master_key
 
-UNLOCK vault
+- UNLOCK vault
 
-MERGE sloth epic_wand
+- MERGE sloth epic_wand
 
-GET princess
+- GET princess
 
-GET hearthstone
+- GET hearthstone
 
