@@ -1,9 +1,9 @@
 class Location::Courtyard < Location
   def connections
-    [ :inn, :bank, :forgery, :bar, :library_entrance, :road_to_castle ]
+    [ :inn, :bank, :forgery, :bar, :church, :road_to_castle ]
   end
 
   def description
-    'Beautiful inn, such precious furniture'
+    'Courtyard is central place of magical city'
   end
 end

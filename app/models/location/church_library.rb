@@ -1,6 +1,6 @@
-class Location::Library < Location
+class Location::ChurchLibrary < Location
   def connections
-    [:library_entrance]
+    [:church]
   end
 
   def describe

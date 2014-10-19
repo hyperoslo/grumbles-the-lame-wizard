@@ -16,10 +16,8 @@ class Game < BaseEntity
 
       # Courtyard
       add_node Location::Courtyard.new {
-        add_node Doodad::HolyFountain.new
         add_node Doodad::Hedge.new
         add_node Doodad::Sign.new
-        add_node Item::Crystal.new
       }
 
       # Bar
@@ -27,20 +25,18 @@ class Game < BaseEntity
         add_node Item::Wine.new
         add_node Doodad::Bartender.new
         add_node Doodad::InsectHunters.new
+        add_node Item::Crystal.new
       }
 
       # LibraryEntrance
-      add_node Location::LibraryEntrance.new {
+      add_node Location::Church.new {
         add_node Doodad::Insects.new
       }
 
       # Library
-      add_node Location::Library.new {
-        add_node Item::SpellBook.new
+      add_node Location::ChurchLibrary.new {
+        add_node Item::WizardyBook.new
         add_node Item::BlacksmithingBook.new
-        add_node Item::UselessBook.new
-        add_node Doodad::PreciousBook1.new
-        add_node Doodad::PreciousBook2.new
       }
 
       # Forgery
