@@ -5,9 +5,9 @@ class Interaction::InnDoorInnKey < Interaction
     if player.find :inn_key
       inn_door = objects["inn_door"]
       inn_key.move_node_to inn_door
-      "You put key in the door lock. Try to unlock the door now"
+      "The key is now in the door lock. I should try and unlock the door now."
     else
-      "Try to pick up key, it's on a desk"
+      "I don’t have the key yet. Maybe I should search the room?"
     end
   end
 end

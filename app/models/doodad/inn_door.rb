@@ -9,12 +9,12 @@ class Doodad::InnDoor < Doodad
 
   def unlock
     if @open
-      'You already unlocked the door'
+      'I’ve already unlocked the door.'
     elsif self.find 'inn_key'
       @open = true
-      'You unlocked the door'
+      'I swiftly unlock the inn door.'
     else
-      'It\'s not way to unlock this door without a key'
+      'It\'s impossible to unlock this door without a key.'
     end
   end
 

@@ -21,7 +21,7 @@ class Location < BaseEntity
 
   def search
     <<-HTML
-      You look around the <strong>#{id}</strong>, seeing:
+      In the <strong>#{id}</strong>, I can see:
 
       #{list_entities}
 
@@ -33,7 +33,7 @@ class Location < BaseEntity
 
   def move_player_to(next_location)
     player.move_node_to(next_location)
-    "Woohoo, you moved to #{next_location.id}"
+    "Woohoo, I’ve made it to <strong>#{next_location.id}</strong>."
   end
 
 end
