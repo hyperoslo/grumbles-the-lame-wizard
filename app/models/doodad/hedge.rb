@@ -16,9 +16,9 @@ class Doodad::Hedge < Doodad
 
   def describe
     if @open
-      'The bank shows in all its glory through the open hedge.'
+      'The <strong>bank</strong> shows in all its glory through the <strong>opened_hedge</strong>.'
     else
-      'I can see small glimpses of a bank through the tight hedge.'
+      'I can see small glimpses of a bank through the tight <strong>hedge</strong>.'
     end
   end
 end

@@ -14,7 +14,7 @@ class Doodad::Vault < Doodad
       castle = player.parent
       castle.reset
     elsif master_key.nil?
-      "The vault requires <strong>master_key</strong>, where can I find it?"
+      "The vault requires a <strong>master_key</strong>, where can I find it?"
     else
       castle = self.parent
       castle.children.delete(self)
