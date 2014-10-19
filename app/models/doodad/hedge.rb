@@ -18,7 +18,7 @@ class Doodad::Hedge < Doodad
     if @open
       'The <strong>bank</strong> shows in all its glory through the <strong>opened_hedge</strong>.'
     else
-      'I can see small glimpses of a bank through the tight <strong>hedge</strong>.'
+      'I can see small glimpses of a <strong>bank</strong> through the tight <strong>hedge</strong>.'
     end
   end
 end
