@@ -12,8 +12,6 @@ Licensed under the MIT license, see LICENSE for more information.
 - [Walkthrough](https://github.com/railsrumble/r14-team-354/blob/master/WALKTHROUGH.md)
 
 
-### Development
-
 ## Requirements
 
 - Ruby 2.1.1+
