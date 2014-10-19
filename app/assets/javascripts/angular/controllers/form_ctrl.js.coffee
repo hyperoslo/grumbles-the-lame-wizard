@@ -32,6 +32,10 @@ angular.module("grumbles")
       words.length = 3
       path = words.join '/'
 
+      Output.add
+        status: "command"
+        response: command.query
+
       $http.post("/cli/#{path}")
         .success (data, status, headers, config) =>
           Output.add data
