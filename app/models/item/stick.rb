@@ -1,6 +1,6 @@
 class Item::Stick < Item
-  attr_reader :with_crystal
-  attr_reader :epic
+  attr_accessor :with_crystal
+  attr_accessor :epic
 
   def initialize
     super
