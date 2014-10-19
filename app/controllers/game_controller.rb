@@ -44,7 +44,7 @@ class GameController < ApplicationController
     if entity.in? [game.player, game.player.current_location]
       entity.search
     else
-      "You can’t search <strong>#{entity.id}</strong>"
+      "I can’t search <strong>#{entity.id}</strong>"
     end
   end
 
@@ -52,7 +52,7 @@ class GameController < ApplicationController
     current_location = game.player.current_location
 
     if current_location == next_location
-      "You already are there"
+      "Hey, I’m already there!"
     else
       current_location.move_player_to next_location
     end
@@ -99,7 +99,7 @@ class GameController < ApplicationController
   end
 
   def missing_method
-    "You try to <strong>#{params[:verb]}</strong>, but realize you have no idea how to do that."
+    "*sigh* I have no idea how to <strong>#{params[:verb]}</strong>."
   end
 
   def missing_other_entity
