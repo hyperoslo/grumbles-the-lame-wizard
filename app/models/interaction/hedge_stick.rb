@@ -1,4 +1,3 @@
-
 class Interaction::HedgeStick < Interaction
   def merge(objects)
     stick = objects["stick"]
@@ -7,7 +6,7 @@ class Interaction::HedgeStick < Interaction
     if hedge.open.eql? true
       location = hedge.parent
       location.children.delete(hedge)
-      "'Yol-Toor-Shul!' and hedge burns to ash."
+      "'Yol-Toor-Shul!' and <strong>opened_hedge</strong> burns to ash."
     else
       if stick.id.eql? :epic_wand
         hedge.open = true
