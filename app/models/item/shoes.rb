@@ -18,28 +18,36 @@ class Item::Shoes < Item
     location = self.player.parent
     if location.id.eql? :church
       self.holy = true
-      "'e' goes away inspired by the sacred chants, there are <strong>holy_shoes</strong> in my bag, cheers!"
+      "Sacred chants scared the ’e’ out of ’holey’. There are <strong>holy_shoes</strong> in my bag now, cheers!"
     else
-      "Yor're perform sacred chants upon your shoes, but that doens't seem to work in <strong>#{location.id}</strong>"
+      "I perform sacred chants on my shoes, but it doesn't seem to work in the <strong>#{location.id}</strong>."
     end
   end
 
   def put
     location = self.player.parent
     if self.holy == false
-      "No way I put on <strong>holey_shoes</strong>. What I shame!"
+      "I can’t wear them while they’re full of holes."
     else
       if location.id.eql? :road_to_castle
         self.player.in_shoes = true
         "Holy fucking shoes, I can walk on the water!"
       else
-        "I fill pretty comfortable even without shoes, why do I put them on?"
+        "I’m quite comfortable without shoes, why would I put them on?"
       end
     end
   end
 
   def pick_up
     move_node_to player
-    'Ah, your trusted shoes.'
+    "Ah, my trusted holey shoes. Seriously, I should get them repaired."
+  end
+
+  def describe
+    if self.holy
+      "Holy fucking shoes!"
+    else
+      "My trusted <strong>holey</strong> shoes. Seriously, I should get them repaired."
+    end
   end
 end

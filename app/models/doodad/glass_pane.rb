@@ -1,5 +1,5 @@
 class Doodad::GlassPane < Doodad
   def describe
-    'Behind a sturdy-looking glass pane hangs a fabulously shiny master key'
+    'Behind a bulletproof-looking glass pane hangs a fabulously shiny master key.'
   end
 end

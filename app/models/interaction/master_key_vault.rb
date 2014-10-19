@@ -5,6 +5,6 @@ class Interaction::MasterKeyVault < Interaction
 
     key.move_node_to vault
 
-    "<strong>master_key</strong> fits in vault socket perfectly. Shell I <strong>unlock</strong> it?"
+    "The <strong>master_key</strong> fits the vault keyhole perfectly. Shall I unlock it?"
   end
 end

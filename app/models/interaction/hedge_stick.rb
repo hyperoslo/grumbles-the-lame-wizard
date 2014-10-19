@@ -10,9 +10,9 @@ class Interaction::HedgeStick < Interaction
     else
       if stick.id.eql? :epic_wand
         hedge.open = true
-        "Hedge is opened, now I can get into the bank"
+        "The hedge opens, revealing the <strong>bank</strong>."
       else
-        "My magic is to weak, I need more power to open the hedge"
+        "My magic is too weak, I’ll need more power to open the hedge."
       end
     end
 

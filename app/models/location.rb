@@ -33,7 +33,7 @@ class Location < BaseEntity
 
   def move_player_to(next_location)
     player.move_node_to(next_location)
-    "Woohoo, I’ve made it to <strong>#{next_location.id}</strong>."
+    "I’m in <strong>#{next_location.id}</strong> now."
   end
 
 end

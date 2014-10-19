@@ -5,9 +5,9 @@ class Location::Church < Location
 
   def describe
     if self.find :insects
-      'Spider webs bar my way! It seems libraries aren’t that popular nowadays.'
+      'Spiders and bugs <strong>bar</strong> my way! It seems libraries aren’t that popular nowadays.'
     else
-      'Church without webs, holy spirit in the air.'
+      'The <strong>church</strong> is cleansed of insects. A holy spirit fills the air.'
     end
   end
 
@@ -18,15 +18,14 @@ class Location::Church < Location
 
     if next_location.is?(:church_library) && insects.present?
       if player.find :insect_hunters
-        "Spiders-flasheaters still bar my way. But now I have insect hunters with me."
+        "Flesh-eating spiders are still in my way, but the <strong>insect_hunters</strong> are with me.."
       else
         hunters = game.find_in_tree :insect_hunters
         hunters.active = true
-        "I'm afraid of insects so much! Perhaps I need some help."
+        "I'm very afraid of insects! Perhaps I need some help to advance."
       end
     else
-      player.move_node_to(next_location)
-      "Woohoo, you moved, now you are in <strong>#{next_location.id}</strong>."
+      super
     end
   end
 end

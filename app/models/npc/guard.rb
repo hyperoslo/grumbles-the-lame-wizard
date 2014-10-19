@@ -8,9 +8,16 @@ class NPC::Guard < NPC
 
   def describe
     if @drunk
-      "Drunk as a lord, pff.. weekling. I can drink twice as much!"
+      "Drunk as a lord, pff.. weakling. I can drink twice as much!"
     else
-      '<strong>guard</strong> watches castle entrance 24/7. No entrance for pleb wizards.'
+      'The <strong>guard</strong> watches the castle grounds 24/7.'
     end
+  end
+
+  def talk_to
+    <<-HTML
+      <strong>me</strong>: LOOK! A three-headed monkey!
+      <strong>guard</strong>: Wrong game bro.
+    HTML
   end
 end

@@ -70,7 +70,7 @@ class BaseEntity
   end
 
   def duplicate
-    'Last I checked, pirating was illegal.'
+    'I can’t duplicate stuff willy-nilly.'
   end
 
   def lock

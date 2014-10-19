@@ -9,6 +9,10 @@ class Interaction::InsectHunterInsect < Interaction
     current_location.children.delete(insects)
     player.children.delete(hunters)
 
-    "Way to the <strong>church_library</strong> is clear!"
- end
+    <<-HTML
+    The way to the <strong>church_library</strong> is now clear!
+
+    <strong>insect_hunters</strong>: We’ll be on our way now, bye bye!
+    HTML
+  end
 end

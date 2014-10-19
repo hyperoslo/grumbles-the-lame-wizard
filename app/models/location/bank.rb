@@ -4,6 +4,6 @@ class Location::Bank < Location
   end
 
   def describe
-    'That goblins probably drive Bentley'
+    'The goblins running the bank probably drive Bentleys. Bling!'
   end
 end

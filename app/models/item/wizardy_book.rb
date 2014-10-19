@@ -1,6 +1,10 @@
 class Item::WizardyBook < Item
   def pick_up
     self.move_node_to player
-    "Amazing wizardy book with ancient spell and recipes"
+    "An amazing <strong>wizardy_book</strong> with ancient spells and recipes."
+  end
+
+  def describe
+    "An amazing <strong>wizardy_book</strong> with ancient spells and recipes."
   end
 end

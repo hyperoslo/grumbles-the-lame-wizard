@@ -4,6 +4,6 @@ class Location::Bar < Location
   end
 
   def describe
-    'Usual bar, nothing specific.'
+    'Apart from the wine being seemingly infinite, this is a fairly ordinary bar.'
   end
 end

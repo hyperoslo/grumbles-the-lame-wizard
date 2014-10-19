@@ -4,7 +4,7 @@ class Doodad::Sign < Doodad
     if player.find :map
       'A useless sign.'
     else
-      'A sign with a map dangling from it.'
+      'A sign with a map attached to it.'
     end
   end
 

@@ -16,9 +16,9 @@ class NPC::Princess < NPC
 
   def describe
     if self.cursed
-      "I've never seen such a creature, hypersonic sloth! But something weird in it's look, and I can feel presence of dark magic around it"
+      "I’ve never seen such a creature: a hypersonic <strong>sloth</strong>! With a crown on its head! But it oozes with dark magic."
     else
-      "Princess is free from dark course! Let me take you with me!"
+      "The <strong>princess</strong> is free from the dark curse! I should take her with me!"
     end
   end
 
@@ -30,10 +30,18 @@ class NPC::Princess < NPC
 
       treasury.reset
     elsif self.cursed
-      "Do I need a sloth? I have Bigglesworth-cat to feed"
+      "Do I need a sloth? I have Bigglesworth-cat to feed."
     else
       self.move_node_to player
-      "Now we can be together till the end of time. Let's and <strong>hearthstone</strong> away from here."
+      "Now we can be together ’til the end of time. Let's <strong>hearthstone</strong> away from here."
+    end
+  end
+
+  def talk_to
+    if self.cursed
+      '<strong>sloth</strong>: EEP. EEP. EEP.'
+    elsif
+      '<strong>princess</strong>: Grumbles, let’s go!'
     end
   end
 end

@@ -3,8 +3,8 @@ class Location::Courtyard < Location
     [ :inn, :bank, :forgery, :bar, :church, :road_to_castle ]
   end
 
-  def description
-    'Courtyard is central place of magical city'
+  def describe
+    'The <strong>courtyard</strong> is the central place of this magical city.'
   end
 
   def move_player_to(next_location)
@@ -13,18 +13,14 @@ class Location::Courtyard < Location
     hedge = current_location.find :hedge
 
     if next_location.is? :bank
-      if hedge.nil?
+      if hedge.nil? || hedge.open
         player.move_node_to(next_location)
-        "Nothing can stop powerfull wizard, which luckly I am!"
-      elsif hedge.open == false
-        "Hedge is on my way, and it's protected by powerfull spell. How can I get through it?"
+        "Nothing can stop this powerful wizard! I enter the <strong>bank</strong>."
       else
-        player.move_node_to(next_location)
-        "Nothing can stop powerfull wizard, which luckly I am!"
+        "The <strong>hedge</strong> is in the way and it’s protected by a powerful spell. How to get through?"
       end
     else
-      player.move_node_to(next_location)
-      "Woohoo, you moved, now you are in <strong>#{next_location.id}</strong>"
+      super
     end
   end
 

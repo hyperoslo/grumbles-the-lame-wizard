@@ -4,7 +4,7 @@ class Location::RoadToCastle < Location
   end
 
   def describe
-    'Castle is far, road is hard'
+    'The <strong>castle</strong> is up ahead, past the <strong>river<strong> - which is inconveniently guarded by a <strong>norwegian_troll</strong>.'
   end
 
   def move_player_to(next_location)
@@ -13,13 +13,12 @@ class Location::RoadToCastle < Location
     if next_location.is?(:castle_entrance)
       if player.find :holy_shoes
         player.move_node_to(next_location)
-        "I can walk on the water, what a nonsense, and crocolisks aren't handrance for me anymore! To the castle!"
+        "I’m walking on water! EAT THAT crocolisks. Arrived at the <strong>castle_entrance</strong>."
       else
-        "Norwegian troll on the bridge, he smalls like a big and he is dangerous!"
+        "There’s a <strong>norwegian_troll</strong> on the bridge. It smells like a pig and is likely dangerous!"
       end
     else
-      player.move_node_to(next_location)
-      "Woohoo, you moved, now you are in <strong>#{next_location.id}</strong>."
+      super
     end
   end
 

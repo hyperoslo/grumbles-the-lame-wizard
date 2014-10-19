@@ -7,9 +7,9 @@ class Interaction::StickWizardyBook < Interaction
     if stick.with_crystal
       player.children.delete(wizardy_book)
       stick.epic = true
-      "Wow, so <strong>epic_wand</strong>, very wizardy, much power, like"
+      "Wow, such <strong>epic_wand</strong>, very wizardy, many power, I like."
     else
-      "My stick is too lame to apply so powerfull spells on it"
+      "My stick is too lame to unleash such a powerful spell on it."
     end
   end
 end

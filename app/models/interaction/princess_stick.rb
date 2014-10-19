@@ -3,9 +3,9 @@ class Interaction::PrincessStick < Interaction
     princess = objects["princess"]
     if princess.cursed
       princess.cursed = false
-      "Poof! <strong>sloth</strong> turns to <strong>princess</strong>!"
+      "Poof! The <strong>sloth</strong> turns into a beautiful <strong>princess</strong>!"
     else
-      "That princess is perferc, no spells could make here better."
+      "The <strong>princess</strong> is perfect, no spells could make her better."
     end
   end
 end

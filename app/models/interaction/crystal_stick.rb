@@ -8,6 +8,10 @@ class Interaction::CrystalStick < Interaction
 
     player.children.delete(crystal)
 
-    "Now my stick isn't lame stick, but it's still not powerfull enought for big magic"
+    <<-HTML
+    AHA! A <strong>crystal_stick</strong>!
+
+    It’s no longer lame, but still not at its full power.
+    HTML
   end
 end

@@ -4,6 +4,6 @@ class Location::ChurchLibrary < Location
   end
 
   def describe
-    'Piles of books'
+    'Piles of books. EVERYWHERE.'
   end
 end

@@ -5,7 +5,7 @@ class Item::Map < Item
 
   def pick_up
     move_node_to player
-    'I’ve put the map in my pants.'
+    'I’ve stuffed the map down my robe.'
   end
 
   private
