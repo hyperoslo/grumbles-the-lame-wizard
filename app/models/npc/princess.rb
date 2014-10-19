@@ -12,4 +12,5 @@ class NPC::Princess < NPC
     else
       :princess
     end
+  end
 end
