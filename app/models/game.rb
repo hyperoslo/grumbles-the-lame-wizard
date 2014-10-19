@@ -30,7 +30,7 @@ class Game < BaseEntity
         add_node Item::Crystal.new
       }
 
-      # LibraryEntrance
+      # Church
       add_node Location::Church.new {
         add_node Doodad::Insects.new
       }

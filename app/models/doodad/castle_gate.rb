@@ -8,4 +8,8 @@ class Doodad::CastleGate < Doodad
 
   def lock
   end
+
+  def describe
+    'The castle gate is what shields the treasury from the outside world.'
+  end
 end
