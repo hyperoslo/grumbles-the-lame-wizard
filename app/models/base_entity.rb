@@ -102,4 +102,8 @@ class BaseEntity
   def drop
     'I don’t want to drop THAT.'
   end
+
+  def put
+    'I can’t put that.'
+  end
 end
