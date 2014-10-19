@@ -31,17 +31,4 @@ class Location < BaseEntity
     true
   end
 
-  def describe
-    <<-DESC
-    #{description}.<br />
-    <br />
-    This location contains:<br />
-    <br />
-    #{list_entities}<br /><br />
-    This location connects to:<br />
-    <br />
-    #{list_connections}
-    DESC
-  end
-
 end
