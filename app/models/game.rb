@@ -52,7 +52,7 @@ class Game < BaseEntity
       add_node Location::Bank.new {
         add_node NPC::Goblin.new
         add_node Doodad::GlassPane.new
-        add_node Doodad::MasterKey.new
+        add_node Item::MasterKey.new
       }
 
       # RoadToCastle

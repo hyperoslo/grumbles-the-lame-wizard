@@ -31,4 +31,9 @@ class Location < BaseEntity
     HTML
   end
 
+  def move_player_to(next_location)
+    player.move_node_to(next_location)
+    "Woohoo, you moved to #{next_location.id}"
+  end
+
 end

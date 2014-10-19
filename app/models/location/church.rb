@@ -16,7 +16,7 @@ class Location::Church < Location
 
     insects = current_location.find :insects
 
-    if next_location.is? :church_library && insects.present?
+    if next_location.is?(:church_library) && insects.present?
       if player.find :insect_hunters
         "Spiders-flasheaters still bar my way. But now I have insect hunters with me."
       else

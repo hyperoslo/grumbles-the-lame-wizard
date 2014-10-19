@@ -11,6 +11,7 @@ class GameController < ApplicationController
     'PATCH'  => :patch,
     'DELETE' => :drop,
     'TRACE'  => :describe,
+    'PUT'    => :put,
   }
 
   respond_to :html, :json
@@ -102,7 +103,7 @@ class GameController < ApplicationController
   end
 
   def success(text)
-    render json: { response: text, status: 'success' }
+    render json: { response: trim(text), status: 'success' }
   end
 
   def error(status, text)
