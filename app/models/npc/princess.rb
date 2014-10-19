@@ -1,9 +1,9 @@
 class NPC::Princess < NPC
-  attr_reader :cursed
+  attr_accessor :cursed
 
   def initialize
     super
-    @cursed = false
+    @cursed = true
   end
 
   def id
@@ -11,6 +11,29 @@ class NPC::Princess < NPC
       :sloth
     else
       :princess
+    end
+  end
+
+  def describe
+    if self.cursed
+      "I've never seen such a creature, hypersonic sloth! But something weird in it's look, and I can feel presence of dark magic around it"
+    else
+      "Princess is free from dark course! Let me take you with me!"
+    end
+  end
+
+  def pick_up
+    gate = game.find_in_tree :castle_gate
+
+    if gate.open.eql? true
+      treasury = player.parent
+
+      treasury.reset
+    elsif self.cursed
+      "Do I need a sloth? I have Bigglesworth-cat to feed"
+    else
+      self.move_node_to player
+      "Now we can be together till the end of time"
     end
   end
 end
