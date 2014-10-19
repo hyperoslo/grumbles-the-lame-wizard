@@ -12,8 +12,12 @@ class Doodad::CastleGate < Doodad
   end
 
   def unlock
-    @open = true
-    describe
+    if player.find :princess
+      "I think it's not the best idea to open <strong>castle_gate</strong>. <strong>guard</strong> will catch us and put use in a <strong>vault</strong>"
+    else
+      @open = true
+      describe
+    end
   end
 
   def describe

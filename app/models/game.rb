@@ -67,10 +67,9 @@ class Game < BaseEntity
       }
 
       # Castle Treasury
-      add_node Location::CastleTreasury.new {
+      add_node Location::Castle.new {
         add_node Doodad::CastleGate.new
-        add_node Item::Chest.new
-        add_node NPC::Princess.new
+        add_node Doodad::Vault.new
       }
 
     end

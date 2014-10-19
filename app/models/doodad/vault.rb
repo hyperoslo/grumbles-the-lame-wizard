@@ -1,4 +1,4 @@
-class Item::Chest < Item
+class Item::Vault < Item
   attr_reader :open
 
   def initialize
@@ -8,17 +8,18 @@ class Item::Chest < Item
 
   def unlock
     gate = game.find_in_tree :castle_gate
+    master_key = self.find :master_key
 
     if gate.open.eql? true
       treasury = player.parent
 
       treasury.reset
+    elsif master_key.nil?
+      "Vault requires master key, where can I find it?"
     else
-      master_key = player.find :master_key
-      player.children.delete(master_key)
-
-      @open = true
-      "Many <strong>gold</strong> conins. It's enough to buy 9000 wizard hats"
+      castle = self.parent
+      castle.children << NPC::Princess.new
+      castle.children.delete(self)
     end
   end
 
