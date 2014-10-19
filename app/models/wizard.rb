@@ -7,11 +7,11 @@ class Wizard < BaseEntity
   alias_method :current_location, :parent
 
   def describe
-    <<-DESC
-    This is you in the <strong>#{current_location.id}</strong>. You are currently carrying:<br />
-    <br />
-    #{list_entities}
-    DESC
+    "You are Grumbles the lame Wizard standing in the <strong>#{current_location.id}</strong>"
+  end
+
+  def search
+    "You are currently carrying:<br><br>#{list_entities}"
   end
 
   def references(id)
