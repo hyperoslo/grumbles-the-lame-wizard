@@ -15,7 +15,7 @@ class BaseEntity
   end
 
   def is?(id)
-    self.id == id.to_sym
+    self == id || self.id == id.to_sym
   end
 
   def add_node(target)
