@@ -1,6 +1,11 @@
 class Item::Map < Item
   def describe
-    map.gsub(" ", "&nbsp").prepend('<div class="map">').concat('</div>')
+    current_location = game.player.current_location.id.to_s
+
+    map.gsub(" ", "&nbsp")
+      .sub(current_location, "<strong>#{current_location}</strong>")
+      .prepend('<div class="map">')
+      .concat('</div>')
   end
 
   def pick_up
