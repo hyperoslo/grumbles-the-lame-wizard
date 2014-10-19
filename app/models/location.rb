@@ -4,7 +4,12 @@ class Location < BaseEntity
     []
   end
 
-  def connects_to?(id)
+  def connects_to?(entity)
+    id = if entity.is_a? Location
+           entity.id
+         else
+           entity
+         end
     connections.include? id
   end
 
